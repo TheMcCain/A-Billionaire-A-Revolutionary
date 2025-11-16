@@ -1,1 +1,1307 @@
+document.head.innerHTML += '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">';e
+
+campaignTrail_temp.election_json = [
+    {
+        "model": "campaign_trail.election",
+        "pk": 20,
+        "fields": {
+            "year": 2020,
+            "display_year": "2020 - A Billionaire and A Revolutionary",
+            "summary": "<p>A Tale of two Prophets... </p>\n\n<b style=\"font-family: DM Serif Text; font-size: 20px;\">Donald Trump.</b> <p>Darling of the Right, the Conservatives version of their retribution against the status quo. They finally had their champion, and He alone would lead them into battle against the Establishment, the Rot, the Deep State.</p>\n\n<b style=\"font-family: DM Serif Text; font-size: 20px;\">Bernie Sanders.</b> <p>Hero of the Left, the Progressives version of their saviour in their most darkest hour. He was ready to bring the fight against corporations, against lobbyists, against that 1% who controlled it all. And yet...</p>\n\n <h2 style='text-decoration: underline; font-family: DM Serif Text;'>These two Prophets would have to work together - whether they liked it or not.</h2>",
+            "image_url": "https://images2.imgbox.com/2d/46/Cyb4yhGx_o.png",
+            "winning_electoral_vote_number": 270,
+            "advisor_url": "https://images2.imgbox.com/f6/4a/UKPeJ66I_o.png",
+            "recommended_reading": "<ul>\n<li><a href=https://www.chicagotribune.com/opinion/editorials/ct-edit-chicago-tribune-biden-endorsement-20200925-lnyxsb5qvrftnjjmj3rnzj33jy-story.html>Our Case For Joe Biden</a></li>\n<li><a href=https://nationalinterest.org/feature/case-trump-166808>The Case For Trump</a></li>\n<li><a href=https://www.npr.org/2020/11/18/935730100/how-biden-won-ramping-up-the-base-and-expanding-margins-in-the-suburbs>How Biden Won: Ramping Up The Base And Expanding Margins In The Suburbs</a></li>\n<li><a href=https://www.prospectmagazine.co.uk/politics/donald-trump-joe-biden-us-election-almost-win-votes-concede>Why Did Trump Almost Win?</a></li>\n<li><a href=https://www.hoover.org/research/no-evidence-voter-fraud-guide-statistical-claims-about-2020-election>No Evidence For Voter Fraud: A Guide To Statistical Claims About The 2020 Election</a></li>\n</ul>",
+            "has_visits": 1,
+            "no_electoral_majority_image": "../static/images/2012-no-majority.jpg"
+        }
+    }
+]
+
+campaignTrail_temp.temp_election_list = [
+    {
+        "id": 20,
+        "year": 2020,
+        "is_premium": 0,
+        "display_year": "2020 - A Billionaire and A Revolutionary"
+    }
+]
+
+credits = function() {
+    c = ["Coding:\nTheMcCain\nApollo\nGoosey\n\nWriting:\nAKR_1984\nTotalRozza \n\nTeam Lead:\ngreguel\n\nSpecial Thanks:\nHouseyhouse - Code 1\nYou - For playing"]
+    text = ""
+    for (i in c) {
+        text += c[i] + "\n"
+    }
+    alert(text)
+  }
+
+campaignTrail_temp.credits = "<button onclick='credits()'><u>Credits</button></u>";
+
+campaignTrail_temp.global_parameter_json = [
+    {
+        "model": "campaign_trail.global_parameter",
+        "pk": 1,
+        "fields": {
+            "vote_variable": 1.125,
+            "max_swing": 0.12,
+            "start_point": 0.94,
+            "candidate_issue_weight": 10,
+            "running_mate_issue_weight": 3,
+            "issue_stance_1_max": -0.71,
+            "issue_stance_2_max": -0.3,
+            "issue_stance_3_max": -0.125,
+            "issue_stance_4_max": 0.125,
+            "issue_stance_5_max": 0.3,
+            "issue_stance_6_max": 0.71,
+            "global_variance": 0.01,
+            "state_variance": 0.005,
+            "question_count": 25,
+            "default_map_color_hex": "#C9C9C9",
+            "no_state_map_color_hex": "#999999"
+        }
+    },
+]
+
+campaignTrail_temp.candidate_json = [
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 301,
+        "fields": {
+            "first_name": "Donald",
+            "last_name": "Trump",
+            "election": 20,
+            "party": "Republican",
+            "state": "De Jure Florida, De Facto New York",
+            "priority": 1,
+            "description": "<h2 style='text-decoration: underline solid #e74c3d 4px; color: #2a9cd7; font-family: Times New Roman; font-style: italic; font-size: 30px; margin: 6px 0 20px 0;'>Donald J. Trump</h2> <h3>Republican, Billionaire</h3><p>Initially viewed as little more than a novelty candidate, Donald Trump upended the Republican establishment by securing the party's nomination, overcoming Kasich, Cruz, and Rubio. That was only the first hurdle.</p><p>\n\nFacing Clinton in the general election, pundits overwhelmingly scoffed at his chances of moving into the White House. They thought the Wall he wanted would prevent him from immigrating to Washington.</p><p>\n\nHowever, as John King stared at his Magic Wall, they realised just how wrong they were. The race was tied.</p><p>\n\nThanks to the GOP-controlled house, Donald Trump was elevated to become the 45th President of the United States. Unfortunately for him, the Senate made Crazy Bernie his lieutenant. And it is now his responsibility to find a way to govern with a profoundly divided legislature.</p>",
+            "color_hex": "#a30000",
+            "secondary_color_hex": null,
+            "is_active": 1,
+            "image_url": "https://images2.imgbox.com/3a/90/e3w1LhAU_o.png",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": null,
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 302,
+        "fields": {
+            "first_name": "Bernie",
+            "last_name": "Sanders",
+            "election": 20,
+            "party": "Socialist, Wait no, Democratic.",
+            "state": "Vermont",
+            "priority": 1,
+            "description": "",
+            "color_hex": "#06069cff",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://images2.imgbox.com/84/ba/Gmnnpjvy_o.png",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": "<h2 style='text-decoration: underline solid #e74c3d 4px; color: #2a9cd7; font-family: Times New Roman; font-style: italic; font-size: 30px; margin: 6px 0 20px 0;'>Bernard Sanders</h2> <h3>Democratic, Revolutionary</h3><p>In 1981, the small town of Burlington in Vermont voted to elect a Socialist as their mayor, defeating the incumbent by only 10 votes..</p><p>\n\nFast forward 35 years, and you now have Bernie Sanders running for the Democratic Party's nomination for President of the United States. In spite of initial success, the establishment spearheaded itself in favour of Hillary Clinton, undermining his efforts. Fortunately for him, he was able to become Clinton's running mate, as damage control to the left, uniting the party to easily overcome the Donald..</p><p>\n\nThat was not the case. As Rachel Maddow read off the projections, it quickly became apparent that such a large nightmare was emerging, which the mainstream media could not overshadow. Thank's to Thomas Hofeller's gerrymanders, there was a Republican house ready to install Trump as the commander in chief. However, Biden used his tie-breaking vote in the Senate to narrowly allow Bernie to take charge as Vice President. What comes next?</p>",
+            "candidate_score": 1,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 50000,
+        "fields": {
+            "first_name": "Mr",
+            "last_name": "Popular Front",
+            "election": 20,
+            "party": "Turbo Team",
+            "state": "Idaho",
+            "priority": 1,
+            "description": "<p>Put description here</p>",
+            "color_hex": "#00425c",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://www.jetsimon.com/public/candidateexample.png",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": null,
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 50001,
+        "fields": {
+            "first_name": "Mr",
+            "last_name": "Plants",
+            "election": 20,
+            "party": "Turbo Team",
+            "state": "Idaho",
+            "priority": 1,
+            "description": "<p>Put description here</p>",
+            "color_hex": "#0c6b28",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://www.jetsimon.com/public/candidateexample.png",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": null,
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 50002,
+        "fields": {
+            "first_name": "Mr",
+            "last_name": "Losertarians",
+            "election": 20,
+            "party": "Turbo Team",
+            "state": "Idaho",
+            "priority": 1,
+            "description": "<p>Put description here</p>",
+            "color_hex": "#cea800",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://www.jetsimon.com/public/candidateexample.png",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": null,
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    }
+]
+
+campaignTrail_temp.running_mate_json = [
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 109261,
+        "fields": {
+            "candidate": 301,
+            "running_mate": 302
+        }
+    }
+]
+
+campaignTrail_temp.opponents_default_json = [
+    {
+        "election": 20,
+        "candidates": [
+            50000,
+            50001,
+            50002
+        ]
+    }
+]
+
+campaignTrail_temp.opponents_weighted_json = [
+    {
+        "election": 20,
+        "candidates": [
+            50000,
+            50001,
+            50002
+        ]
+    }
+]
+
+jet_data = {
+    "headerColor": "#8A8A8A",
+    "windowColor": "#FFFFFF",
+    "containerColor": "#F0F0F0",
+    "innerWindowColor": "#FFFFFF",
+    "bannerImageUrl": "https://images2.imgbox.com/01/c3/Va520Xiq_o.png",
+    "backgroundImageUrl": "https://images2.imgbox.com/51/fd/XoNUxbwr_o.png",
+    "endingTextColor": "#000000",
+    "customQuote": "",
+    "gameTitle": "Easter Egg."
+}
+
+//#startcode
+
+corrr = '\n              <h2>Easter Egg.</h2>\n            ';
+// Set header color
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#8A8A8A";
+
+// The window color should be transparent so the custom background image shows
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "transparent";
+
+document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
+
+// Ensure the game window is transparent for the background image
+$("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
+
+// Set the container color (the area around the game window)
+$(".container")[0].style.backgroundColor = "#00324D";
+
+document.getElementById("header").src = "https://images2.imgbox.com/01/c3/Va520Xiq_o.png";
+document.body.background = "https://i.imgur.com/qtPgjGt.png";
+
+document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#FFFFFF!important;}</style>";
+
+corrr=`<img src='https://images2.imgbox.com/25/13/qatFhiys_o.png' width='100%'/><span id="after_button"></span>`;
+if (gameWindow) {
+    // Set the dark border for the game window
+    gameWindow.style.border = "3px solid #595959";
+}
+
+// Set the dark, textured background image for the main game window
+$("#game_window")[0].style.background = "#2B9CD9";
+
+e = campaignTrail_temp
+
+function addDynamicCSS() {
+  const css = `
+  .mytooltip {
+      position: relative;
+      display: inline-block;
+      font-weight: 600;
+      font-style: italic;
+      font-size: 1em;
+      line-height: inherit;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.25s ease, text-shadow 0.25s ease;
+  }
+
+  .mytooltip:hover {
+      transform: scale(1.04);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .mytooltip .mytooltiptext {
+      opacity: 0;
+      visibility: hidden;
+      background: rgba(255,255,255,0.92);
+      color: #1d1d1f;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 600;
+      font-style: italic;
+      text-align: center;
+      padding: 18px 28px;
+      border-radius: 20px;
+      border: 1px solid rgba(0,0,0,0.08);
+      position: absolute;
+      z-index: 1000;
+      bottom: 140%;
+      left: 50%;
+      transform: translateX(-50%) translateY(0);
+      max-width: 360px;
+      min-width: 240px;
+      white-space: normal;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.25), 0 0 20px rgba(255,255,255,0.15);
+      backdrop-filter: blur(14px);
+      transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease, border 0.35s ease;
+      pointer-events: none;
+  }
+
+  .mytooltip.show .mytooltiptext {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(-14px);
+      box-shadow: 0 20px 48px rgba(0,0,0,0.3), 0 0 28px rgba(255,255,255,0.2);
+      border: 1px solid rgba(0,0,0,0.12);
+  }
+
+  .mytooltip.hide .mytooltiptext {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-50%) translateY(0);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.25), 0 0 20px rgba(255,255,255,0.15);
+  }
+
+  .mytooltip img {
+      display: block;
+      margin: 12px auto 0 auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 14px;
+      border: 1px solid rgba(0,0,0,0.1);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+      background: none !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  }
+
+  .mytooltip img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.25);
+      border: 1px solid rgba(0,0,0,0.15);
+  }
+  `;
+
+  const styleElem = document.createElement('style');
+  styleElem.type = 'text/css';
+  styleElem.appendChild(document.createTextNode(css));
+  document.head.appendChild(styleElem);
+
+  document.body.addEventListener('mouseenter', e => {
+      const el = e.target.closest('.mytooltip');
+      if (!el) return;
+
+      let tooltipText = el.querySelector('.mytooltiptext');
+      if (!tooltipText) {
+          tooltipText = document.createElement('span');
+          tooltipText.className = 'mytooltiptext';
+          tooltipText.innerHTML = el.getAttribute('data-tooltip') || 'Tooltip';
+          el.appendChild(tooltipText);
+      }
+
+      el.classList.remove('hide');
+      el.classList.add('show');
+  }, true);
+
+  document.body.addEventListener('mouseleave', e => {
+      const el = e.target.closest('.mytooltip');
+      if (!el) return;
+      el.classList.remove('show');
+      el.classList.add('hide');
+  }, true);
+}
+
+addDynamicCSS();
+
+
+function appendStyle() {
+
+    if (!document.querySelector('meta[name="viewport"]')) {
+        const metaTag = document.createElement('meta');
+        metaTag.name = "viewport";
+        metaTag.content = "width=device-width, initial-scale=1";
+        document.head.appendChild(metaTag);
+    }
+
+    // Custom styles here
+    if (!document.querySelector('#radio-option-style')) {
+        const style = document.createElement('style');
+        style.id = 'radio-option-style';
+        style.textContent = `
+			
+			
+			
+			#election_description_window {
+				background-color: #0D2133;
+				color: white;
+				height: 300px;
+				border-color: #000000;
+				border-width: 2px;
+				border-style: solid;
+				border-image: initial;
+                font-size: 13px;
+			}
+			#election_image {
+			  margin-left: 0px;
+			  margin-top: 0px;
+			  width: 350px;
+			  height: 250px;
+			  background-image: linear-gradient(to right, transparent, rgba(13, 33, 51, 1)), url('https://images2.imgbox.com/7a/54/cGeFfh8t_o.png');
+			  background-size: cover;
+			  z-index: 1;
+			  background-position: center;
+			}
+			
+			#election_image img {
+			  padding: 1px 1px;
+			  border: 1px solid #C9C9C9;
+			  z-index: 0;
+			  opacity: 0;
+			}
+			#inner_window_1 {
+			  margin: 1em;
+			}
+			.campaign_trail_start_emphasis {
+			  background-color: transparent;
+			}
+			p, label, h3 {
+			font-family: Jost;
+			}
+			p {
+			margin: 0 auto;
+			}
+			#visit-content {
+			border: 5px solid #34b4f6;
+			}
+img#candidate_pic,
+  img#running_mate_pic {
+    border: 4px solid #c9c9c9;
+  }
+.inner_window_question {
+height: 70%;
+}
+#candidate_summary ul {
+  display: none;
+}
+
+#running_mate_summary ul {
+  display: none;
+}
+
+#visit_window {
+  height: auto;
+  border: 5px solid #34b4f6;
+  border-image: linear-gradient(90deg, #26666f, #751212) 2;
+  background-image: linear-gradient(to right, transparent, #310031), url('https://upload.wikimedia.org/wikipedia/commons/a/af/WhiteHouseSouthFacade.JPG');
+  background-size: cover;
+}
+.inner_inner_window h3 {
+  background: #34b4f6;
+}
+
+body {
+  background: url(https://i.imgur.com/S1DdDWE.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.overlay_window {
+  position: absolute;
+  opacity: 1;
+  background: #FFFFFF;
+  border: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 
+              0 2px 8px rgba(0, 0, 0, 0.08);
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
+  overflow: hidden;
+  width: 50%;
+}
+
+#visit_content {
+  height: auto;
+  padding: 0;
+}
+
+.overlay_window_content {
+  height: auto;
+  font-weight: 400;
+  overflow-y: auto;
+  max-height: calc(70vh - 120px);
+  overflow-x: auto;
+  /*! text-overflow: clip; */
+}
+
+.overlay_window h3 {
+  margin: 0;
+  padding: 5px 0 0;
+  font-weight: 600;
+  font-size: 1.25em;
+  background-color: transparent;
+  border-bottom: none;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 40%;
+}
+
+.overlay_window img {
+  margin: 0 24px 16px;
+  border: none;
+  height: auto;
+  object-fit: cover;
+  display: none;
+}
+
+.overlay_window p {
+  padding: 0 24px 5px;
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: white;
+  font-weight: 400;
+  text-align: left;
+  background-image: linear-gradient(to left, transparent, #310031aa);
+  text-wrap: wrap;
+  /*! overflow: clip; */
+  overflow-wrap: break-word;
+}
+
+.overlay_buttons {
+  padding: 0 24px 24px;
+  display: flex;
+  gap: 12px;
+}
+
+#ok_button, #no_feedback_button, #confirm_visit_button, #no_visit_button {
+  width: 100%;
+  padding: 5px 5px;
+  font-size: 0.95em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: none;
+  /*! border: 2px solid black; */
+}
+
+#ok_button, #confirm_visit_button {
+  background: #26666f;
+  color: white;
+}
+
+#ok_button:hover, #confirm_visit_button:hover {
+  background: #26737e;
+  /*! transform: translateY(-1px); */
+}
+
+#no_feedback_button, #no_visit_button {
+  background: #751212;
+  color: #fff;
+  /*! border: 0.5px solid black; */
+}
+
+#no_feedback_button:hover, #no_visit_button:hover {
+  background: #8c1616;
+}
+
+.overlay_buttons br {
+  display: none;
+}
+#election_id_button {
+margin-right: 40%;
+margin-top: 10%;
+}
+
+  
+		  button:not(.player-control-button), .btn, .is-info, .is-success, .is-primary, .is-secondary {
+				box-sizing: border-box !important;
+				border-collapse: collapse;
+				font-family: Jost;
+				font-weight: bold;
+				background: #E74C3C;
+				
+				border: none;
+				
+				color: white; 
+				font-weight: bold;
+				padding: 4px 15px;
+				cursor: pointer;
+				
+				transition: all 0.1s ease;
+				transform: none;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+			}
+
+			button:not(.player-control-button):hover, .btn:hover, .is-info:hover, .is-success:hover, .is-primary:hover, .is-secondary:hover {
+				background: #C23C2F; 
+				transform: scale(1.05);
+			}
+
+			button:not(.player-control-button):active, .btn:active, .is-info:active, .is-success:active, .is-primary:active, .is-secondary:active {
+				transform: translateY(1px) scale(1.1);
+				
+			}
+			
+			
+        
+        
+        
+        `;
+        document.head.appendChild(style);
+    }
+
+// Psst: this is for replacing the site_description with this custom modal.
+(() => {
+    const CONFIG = {
+        imageHeight: '150px',
+        imageSrc: 'https://images2.imgbox.com/34/fe/upessUco_o.png',
+        margin: '-20px',
+        widthCalc: 'calc(100% - 30px)'
+    };
+
+    const inner = document.getElementById('inner_window_1');
+    if (!inner || inner.children.length < 3) return;
+    const [headingEl, contentEl] = inner.children;
+    const gameStart = document.getElementById('game_start');
+    const gameWindow = document.getElementById('game_window');
+
+    // temporary auto resize
+    if (gameWindow) gameWindow.style.height = 'auto';
+
+    headingEl.innerHTML = `<h3 style="color: #032E4C; letter-spacing: 2px">A Billionaire A Revolutionary</h3>`;
+    Object.assign(contentEl.style, { marginLeft: CONFIG.margin, width: CONFIG.widthCalc });
+    contentEl.innerHTML = generatePrologueHTML(CONFIG);
+
+    if (gameStart) {
+        gameStart.innerHTML = '<strong>Proceed.</strong>';
+        const clearHeight = () => { if (gameWindow) gameWindow.style.removeProperty('height'); };
+        if (window.jQuery) $('#game_start').on('click', clearHeight);
+        else gameStart.addEventListener('click', clearHeight);
+    }
+
+    function generatePrologueHTML({ titleColor, imageHeight, imageSrc }) {
+        return `
+      <div style=\"align-items: center; display: flex; height: ${imageHeight}; justify-content: center; overflow: hidden;\">
+        <img src=\"${imageSrc}\" alt=\"alt text\" style=\"object-fit: cover; object-position: center 0px; width: auto\" />
+      </div>
+    <p>
+      "It is the dawn of the 2016 General Election in the USA, and it is more polarised than ever. Hillary Clinton, the Democratic nominee, chooses Bernie Sanders over Tim Kaine for the Vice Presidency to appeal to Progressives. Businessman and Billionaire Donald Trump is the Republic nominee, who chooses Rush Limbaugh to be his Vice President. Campaign rhetoric and policies drive Americans further apart since the civil war, and it seems increasingly likely it will be the closest election since 2000.</p>\n\n<p>On the night of the election, it looks like a dead-heat, and the nail biting election ends with...a tie. Analysists are stunned, the public are shocked and the nation holds its breath as the political fighting carries on.</p>\n\n<p>On the congressional front, the Democrats make it a tie in the Senate, meanwhile the Republicans hold onto the house - and ultimately, hand over the Presidency to Donald Trump. But in another shock to the political world, Bernie Sanders is chosen to be the Vice President. Joe Biden, the outgoing VP, breaks the tie, ensuring a Democrat is a part of the administration and stopping the momentum of the Republicans.</p>\n\n<p>How will this Trump/Bernie administration hold together? Will they work together to drain the swamp and big business, or will they find themselves bitterly divided? A MAGA-Feel the Bern coalition, or the penultimate fight of the Populists?"
+    </p>
+    `;
+    }
+
+
+})();
+
+}
+
+appendStyle();
+
+
+
+function ensureStylesheet(url, id) {
+	if (id && document.getElementById(id)) {
+        if (id === 'unpkg-7css') {
+            const link = document.getElementById(id);
+if (link) link.remove();
+            return; 
+        }
+        return;
+    }
+	if (document.querySelector('link[rel="stylesheet"][href="' + url + '"]')) return;
+const link = document.createElement('link');
+	link.rel = 'stylesheet';
+	link.href = url;
+	if (id) link.id = id;
+	document.head.appendChild(link);
+}
+
+function ensureMetaViewport() {
+    if (!document.querySelector('meta[name="viewport"]')) {
+        const m = document.createElement('meta');
+m.name = 'viewport';
+        m.content = 'width=device-width, initial-scale=1';
+        document.head.appendChild(m);
+    }
+}
+
+applyGlobalStyles.sheets = {};
+function applyGlobalStyles(css, id = 'app-theme') {
+    if ('adoptedStyleSheets' in document && 'replaceSync' in CSSStyleSheet.prototype) {
+        if (!applyGlobalStyles.sheets[id]) {
+            applyGlobalStyles.sheets[id] = new CSSStyleSheet();
+document.adoptedStyleSheets = [...document.adoptedStyleSheets, applyGlobalStyles.sheets[id]];
+        }
+        applyGlobalStyles.sheets[id].replaceSync(css);
+        return;
+}
+
+    let el = document.getElementById(id);
+    if (!el) {
+        el = document.createElement('style');
+el.id = id;
+        document.head.appendChild(el);
+    }
+    el.textContent = css;
+}
+
+
+RecReading = true
+
+class Song {
+    constructor(title, artist, genre, coverLink, audioLink) {
+        this.title = title;
+this.artist = artist;
+        this.genre = genre;
+        this.coverLink = coverLink;
+        this.audioLink = audioLink;
+}
+}
+
+class Playlist {
+    constructor() {
+        this.songs = [];
+this.currentSongIndex = 0;
+    }
+
+    addSong(song) {
+        this.songs.push(song);
+    }
+
+    getCurrentSong() {
+        return this.songs[this.currentSongIndex];
+    }
+
+    playNext() {
+        this.currentSongIndex = (this.currentSongIndex + 1) % this.songs.length;
+    }
+
+    playPrevious() {
+        this.currentSongIndex = (this.currentSongIndex - 1 + this.songs.length) % this.songs.length;
+    }
+}
+window.Playlist = Playlist
+window.Song = Song
+
+let playlist;
+
+function changePlaylist(newPlaylist) {
+    playlist = newPlaylist;
+    playlist.currentSongIndex = 0;
+const audio = document.getElementById("audio");
+    const uiElements = {
+        cover: document.getElementById("cover"),
+        title: document.getElementById("title"),
+        artist: document.getElementById("artist"),
+        genre: document.getElementById("genre"),
+        playPauseButton: document.getElementById("playPauseButton")
+    };
+playSong(audio, uiElements);
+}
+window.changePlaylist = changePlaylist
+
+function updateUI(song, uiElements) {
+    uiElements.cover.src = song.coverLink;
+    uiElements.title.textContent = song.title;
+    uiElements.artist.textContent = song.artist;
+uiElements.genre.textContent = song.genre;
+}
+
+function playSong(audio, uiElements) {
+    const currentSong = playlist.getCurrentSong();
+    updateUI(currentSong, uiElements);
+    audio.src = currentSong.audioLink;
+    audio.play();
+}
+
+(function () {
+    const SONGS_DATA = [{ title: "I Fought The Law", artist: "The Clash", coverLink: "https://images2.imgbox.com/75/e6/16lmn60g_o.png", videoIds: ["AL8chWFuM-s"] }, { title: "Youth of America", artist: "Birdbrain", coverLink: "https://images2.imgbox.com/21/e4/4tds90Dl_o.png", videoIds: ["MCp5ior44dA"] }, { title: "Out of Touch", artist: "Daryl Hall & John Oates", coverLink: "https://images2.imgbox.com/7b/c8/GWVBWkbG_o.png", videoIds: ["DCkJ5lGPqFs"] }, { title: "Hooked on America", artist: "Royal Philharmonic Orchestra", coverLink: "https://images2.imgbox.com/a9/66/H32ceyRc_o.png", videoIds: ["3pj2Pd6T3uA"] }, { title: "The Humbling River", artist: "Puscifer", coverLink: "https://images2.imgbox.com/bd/be/AErKLREa_o.png", videoIds: ["siWusSBld7k"] }, { title: "We Didn't Start The Fire", artist: "Billy Joel", coverLink: "https://images2.imgbox.com/3e/ca/tVTAzWsA_o.png", videoIds: ["eFTLKWw542g"] }, { title: "Golden Eagle", artist: "AJJ", coverLink: "https://images2.imgbox.com/4e/fc/92FTnuhh_o.png", videoIds: ["GmnnQ0M0tlw"] }];
+    const YOUTUBE_PLAYER_DIV_ID = 'youtube-player-div';
+    const PLAYER_CONTAINER_ID = 'musicPlayerContainer';
+    const YOUTUBE_API_URL = 'https://www.youtube.com/iframe_api';
+    const RECENT_TRACKS_COUNT = 3;
+    let ytPlayer = null;
+    let originalSongOrderForCurrentPlaylist = [];
+    let playlist = null;
+    let recentTracks = [];
+    let PLAYLISTS_DATA = [];
+    let playButton = null;
+    let nextButton = null;
+    let prevButton = null;
+    let songTitleElement = null;
+    let artistElement = null;
+    let coverElement = null;
+    let playlistSelectorElement = null;
+    let progressElement = null;
+    let timeDisplayElement = null;
+    let progressInterval = null;
+    class Song {
+        constructor(title, artist, coverLink, videoIds) {
+            this.title = title;
+            this.artist = artist;
+            this.coverLink = coverLink;
+            this.videoIds = Array.isArray(videoIds) ? videoIds : [videoIds];
+            this.currentVideoIndex = 0;
+        }
+        getNextVideoId() {
+            const id = this.videoIds[this.currentVideoIndex];
+            this.currentVideoIndex = (this.currentVideoIndex + 1) % this.videoIds.length;
+            return id;
+        }
+        getVideoId() {
+            return this.videoIds[this.currentVideoIndex];
+        }
+    }
+
+    class Playlist {
+        constructor(songs) {
+            this.songs = songs;
+            this.currentSongIndex = 0;
+        }
+        getCurrentSong() {
+            return this.songs[this.currentSongIndex];
+        }
+        nextSong() {
+            this.currentSongIndex = (this.currentSongIndex + 1) % this.songs.length;
+            return this.getCurrentSong();
+        }
+        prevSong() {
+            this.currentSongIndex = (this.currentSongIndex - 1 + this.songs.length) % this.songs.length;
+            return this.getCurrentSong();
+        }
+        setCurrentSongIndex(index) {
+            this.currentSongIndex = index;
+            updateUI();
+        }
+    }
+
+    function createPlayerElements() {
+        const playerFragment = document.createDocumentFragment();
+        const container = document.createElement("div");
+        container.id = PLAYER_CONTAINER_ID;
+
+        const coverArt = document.createElement("img");
+        coverArt.id = "coverArt";
+        coverArt.alt = "Album Cover";
+        coverElement = coverArt;
+        container.appendChild(coverArt);
+
+        const rightPanel = document.createElement("div");
+        rightPanel.id = "rightPanel";
+        
+        const infoPanel = document.createElement("div");
+        infoPanel.id = "infoPanel";
+        songTitleElement = document.createElement("div");
+        songTitleElement.id = "songTitle";
+        artistElement = document.createElement("div");
+        artistElement.id = "artistName";
+        infoPanel.appendChild(songTitleElement);
+        infoPanel.appendChild(artistElement);
+        rightPanel.appendChild(infoPanel);
+
+        const progressTimeContainer = document.createElement("div");
+        progressTimeContainer.id = "progressTimeContainer";
+        
+        progressElement = document.createElement("input");
+        progressElement.type = "range";
+        progressElement.min = "0";
+        progressElement.value = "0";
+        progressTimeContainer.appendChild(progressElement);
+        
+        timeDisplayElement = document.createElement("div");
+        timeDisplayElement.id = "timeDisplayElement";
+        timeDisplayElement.textContent = "0:00 / 0:00";
+        progressTimeContainer.appendChild(timeDisplayElement);
+        rightPanel.appendChild(progressTimeContainer);
+
+
+        const controlsContainer = document.createElement("div");
+        controlsContainer.id = "playerControls";
+        const createControl = (id, text) => {
+            const btn = document.createElement("button");
+            btn.id = id;
+            btn.textContent = text;
+            btn.className = "player-control-button";
+            return btn;
+        };
+        prevButton = createControl("prevButton", "\u23ee");
+        playButton = createControl("playButton", "\u25b6");
+        nextButton = createControl("nextButton", "\u23ed");
+        
+        controlsContainer.appendChild(prevButton);
+        controlsContainer.appendChild(playButton);
+        controlsContainer.appendChild(nextButton);
+        rightPanel.appendChild(controlsContainer);
+
+        const queueContainer = document.createElement("div");
+        queueContainer.id = "player-queue-container";
+        const queueTitle = document.createElement("div");
+        queueTitle.id = "player-queue-title";
+        queueTitle.textContent = "UP NEXT";
+        const queueListElement = document.createElement("ul");
+        queueListElement.id = "player-queue-list";
+        queueContainer.appendChild(queueTitle);
+        queueContainer.appendChild(queueListElement);
+        rightPanel.appendChild(queueContainer);
+
+        playlistSelectorElement = document.createElement("select");
+        playlistSelectorElement.id = "playlistSelector";
+        playlistSelectorElement.style.cssText = "width: 100%; margin-top: 10px; padding: 5px; border-radius: 4px; border: 1px solid #d9d9d9; display: none;";
+        rightPanel.appendChild(playlistSelectorElement);
+
+        container.appendChild(rightPanel); 
+        
+        const playerDiv = document.createElement("div");
+        playerDiv.id = YOUTUBE_PLAYER_DIV_ID;
+        container.appendChild(playerDiv);
+
+        playerFragment.appendChild(container);
+        return playerFragment;
+    }
+
+    function injectStyles() {
+        const style = document.createElement('style');
+        style.type = 'text/css';
+        style.innerHTML = `:root{
+            --color-background:#FFFFFF;
+            --color-text-main:#1C1C1E; 
+            --color-text-secondary:#8E8E93; 
+            --color-accent:#007AFF; 
+            --color-progress-fill:#007AFF;
+            --color-progress-track:#E5E5EA; 
+            --color-shadow:rgba(0,0,0,0.1); 
+            --font-family:'-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif';
+            --player-width:800px; 
+        }
+#musicPlayerContainer{
+    width:var(--player-width);
+    max-width:95%;
+    background-color:var(--color-background);
+    border:none;
+    border-radius:12px;
+    padding:20px;
+    margin:20px auto;
+    display:flex; 
+    flex-direction:row;
+    align-items: center; 
+    font-family:var(--font-family);
+    box-shadow: 0 4px 16px var(--color-shadow);
+    transition: box-shadow 0.3s;
+}
+#musicPlayerContainer:hover{
+    box-shadow: 0 6px 20px var(--color-shadow);
+}
+#rightPanel {
+    flex-grow: 1; 
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 140px; 
+}
+#coverArt{
+    width:140px!important; 
+    height:140px!important;
+    flex-shrink: 0; 
+    border:none;
+    border-radius:8px;
+    object-fit:cover;
+    box-shadow: 0 2px 8px var(--color-shadow);
+}
+#infoPanel{
+    width: 100%; 
+    text-align:left; 
+    margin-bottom:5px;
+    padding:0;
+    background-color:transparent;
+    order: 1;
+}
+#songTitle{
+    font-size:1.3em!important;
+    font-weight:600;
+    color:var(--color-text-main);
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    font-family:var(--font-family);
+    text-transform:none;
+    margin-bottom: 2px;
+}
+#artistName{
+    font-size:1.0em!important;
+    color:var(--color-text-secondary);
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    font-family:var(--font-family);
+    text-transform:none;
+}
+#progressTimeContainer{
+    width: 100%;
+    margin-top:auto;
+    margin-bottom:0; 
+    order: 2; 
+    position: relative; /* Needed for thumb positioning */
+}
+#timeDisplayElement{
+    font-size:0.75em!important;
+    text-align:right!important;
+    color:var(--color-text-secondary)!important;
+    margin-top:2px;
+    font-family:var(--font-family);
+    display:flex;
+    justify-content:space-between;
+}
+input[type="range"]{
+    height:4px; 
+    background-color:var(--color-progress-track);
+    border-radius:2px;
+    cursor:pointer;
+    -webkit-appearance:none;
+    appearance:none;
+    width:100%;
+    margin: 7px 0;
+}
+input[type="range"]::-webkit-slider-runnable-track{
+    background-color:var(--color-progress-track);
+    height: 4px;
+    border-radius: 2px;
+}
+input[type="range"]::-moz-range-track{
+    background-color:var(--color-progress-track);
+    height: 4px;
+    border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    background: var(--color-background);
+    border: 2px solid var(--color-accent);
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-50%); 
+    position: relative;
+    top: 50%;
+}
+input[type="range"]::-moz-range-thumb{
+    width: 15px;
+    height: 15px;
+    background:var(--color-background); 
+    border:2px solid var(--color-accent); 
+    border-radius:50%;
+    cursor:pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, var(--color-progress-fill) 0%, var(--color-progress-fill) var(--progress-percent), var(--color-progress-track) var(--progress-percent), var(--color-progress-track) 100%);
+}
+input[type="range"]::-moz-range-progress {
+    background-color: var(--color-progress-fill);
+    border-radius: 2px 0 0 2px;
+}
+#playerControls{
+    width: 100%;
+    display:flex;
+    gap:40px;
+    justify-content:center;
+    align-items: center; 
+    margin-top: 15px;
+    padding-bottom: 0;
+    order: 3; 
+}
+.player-control-button{
+    background-color:transparent;
+    border:none;
+    color:var(--color-text-main);
+    cursor:pointer;
+    font-size:1.8em!important;
+    padding:5px!important;
+    line-height:1;
+    transition:color 0.15s, transform 0.1s;
+    font-weight:400;
+}
+.player-control-button#playButton, .player-control-button#pauseButton{
+    font-size:2.5em!important;
+    color:var(--color-accent);
+    font-family: inherit;
+}
+.player-control-button:hover{
+    color:var(--color-accent);
+    transform:scale(1.05);
+}
+.player-control-button.active{color:white;}
+#player-queue-container, #playlistSelector {
+    display: none !important;
+}
+#youtube-player-div{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}`;
+        document.head.appendChild(style);
+    }
+
+    function injectHeader() {
+        const headerHtml = `<div id="modHeaderBanner"></div>`;
+        document.body.insertAdjacentHTML('afterbegin', headerHtml);
+    }
+
+    function bindUIEventListeners() {
+        playButton.addEventListener('click', togglePlayPause);
+        nextButton.addEventListener('click', playNext);
+        prevButton.addEventListener('click', playPrev);
+        progressElement.addEventListener('input', seekTo);
+        playlistSelectorElement.addEventListener('change', changePlaylist);
+    }
+
+    function updateUI() {
+        const song = playlist.getCurrentSong();
+        if (song) {
+            songTitleElement.textContent = song.title;
+            artistElement.textContent = song.artist;
+            coverElement.src = song.coverLink;
+        }
+        
+        playButton.textContent = (ytPlayer && ytPlayer.getPlayerState() === YT.PlayerState.PLAYING) ?
+        "\u23f8" : "\u25b6";
+    }
+
+    function updateQueueDisplay() { }
+
+    function changePlaylist() {
+        const selectedIndex = parseInt(playlistSelectorElement.value);
+        const newSongsData = PLAYLISTS_DATA[selectedIndex].songs;
+        const newSongs = newSongsData.map(d => new Song(d.title, d.artist, d.coverLink, d.videoIds || d.videoId));
+        originalSongOrderForCurrentPlaylist = [...newSongs];
+        playlist = new Playlist(newSongs);
+        playlist.setCurrentSongIndex(0);
+        loadCurrentSong(true);
+    }
+
+    function loadYouTubeAPI() {
+        return new Promise(resolve => {
+            if (window.YT && window.YT.Player) {
+                resolve();
+                return;
+            }
+            const tag = document.createElement('script');
+
+            tag.src = YOUTUBE_API_URL;
+            window.onYouTubeIframeAPIReady = resolve;
+            document.head.appendChild(tag);
+        });
+    }
+
+    function loadCurrentSong(autoplay = false) {
+        const song = playlist.getCurrentSong();
+        if (!song || !ytPlayer || !ytPlayer.loadVideoById) return;
+        let videoId = song.getVideoId();
+        let maxAttempts = song.videoIds.length;
+        let attempts = 0;
+        while (recentTracks.includes(videoId) && attempts < maxAttempts) {
+            videoId = song.getNextVideoId();
+            attempts++;
+        }
+        if (attempts === maxAttempts) { videoId = song.getVideoId();
+        }
+        recentTracks.push(videoId);
+        if (recentTracks.length > RECENT_TRACKS_COUNT) {
+            recentTracks.shift();
+        }
+        ytPlayer.loadVideoById(videoId, 0, 'default');
+        if (autoplay) {
+            ytPlayer.playVideo();
+        } else {
+            ytPlayer.pauseVideo();
+        }
+        updateUI();
+        clearInterval(progressInterval);
+        progressInterval = setInterval(updateProgress, 100);
+    }
+
+    function togglePlayPause() {
+        if (!ytPlayer) return;
+        const playerState = ytPlayer.getPlayerState();
+        if (playerState === YT.PlayerState.PLAYING) {
+            ytPlayer.pauseVideo();
+        } else {
+            ytPlayer.playVideo();
+        }
+        updateUI();
+    }
+
+    function playNext() {
+        playlist.nextSong();
+        loadCurrentSong(true);
+    }
+
+    function playPrev() {
+        playlist.prevSong();
+        loadCurrentSong(true);
+    }
+
+    function updateProgress() {
+        if (!ytPlayer || typeof ytPlayer.getCurrentTime !== 'function') return;
+        const currentTime = ytPlayer.getCurrentTime();
+        const duration = ytPlayer.getDuration();
+        progressElement.max = duration;
+        
+        const playerState = ytPlayer.getPlayerState();
+        if (playerState === YT.PlayerState.PLAYING || playerState === YT.PlayerState.PAUSED) {
+             progressElement.value = currentTime;
+        } else if (playerState === YT.PlayerState.ENDED) {
+            progressElement.value = duration;
+        }
+
+        const progressPercent = (duration > 0) ? (currentTime / duration) * 100 : 0;
+        progressElement.style.setProperty('--progress-percent', `${progressPercent}%`);
+        
+        const formatTime = (seconds) => {
+            const min = Math.floor(seconds / 60);
+            const sec = Math.floor(seconds % 60).toString().padStart(2, '0');
+            return `${min}:${sec}`;
+        };
+        const totalDuration = formatTime(duration);
+        timeDisplayElement.innerHTML = `<span style="float: left;">${formatTime(currentTime)}</span><span style="float: right;">${totalDuration}</span>`;
+    }
+
+    function seekTo() {
+        if (ytPlayer && ytPlayer.seekTo) {
+            ytPlayer.seekTo(progressElement.value, true);
+        }
+    }
+
+    window.onPlayerReady = (event) => {
+        event.target.setVolume(20);
+        loadCurrentSong(false);
+    };
+
+    window.onPlayerStateChange = (event) => {
+        if (event.data === YT.PlayerState.ENDED) {
+            playNext();
+        }
+        updateUI();
+    };
+    window.onPlayerError = (event) => {
+        const song = playlist.getCurrentSong();
+        if (song.videoIds.length > 1) {
+            loadCurrentSong(true);
+        } else {
+            playNext();
+        }
+    };
+    async function initializeMusicPlayer() {
+        try {
+            injectHeader();
+            injectStyles();
+            PLAYLISTS_DATA = [{songs: SONGS_DATA }];
+            const initialSongs = PLAYLISTS_DATA[0].songs.map(d => new Song(d.title, d.artist, d.coverLink, d.videoIds || d.videoId));
+            originalSongOrderForCurrentPlaylist = [...initialSongs];
+            playlist = new Playlist(initialSongs);
+            const playerFragment = createPlayerElements();
+            PLAYLISTS_DATA.forEach((pl, index) => { const option = document.createElement("option"); option.value = index.toString(); option.textContent = pl.name; playlistSelectorElement.appendChild(option); });
+            const anchorElement = document.getElementById("game_window");
+            const targetContainer = (anchorElement && anchorElement.parentNode) ? anchorElement.parentNode : document.body;
+            const insertBeforeElement = (anchorElement && anchorElement.parentNode) ? anchorElement.nextSibling : null;
+            targetContainer.insertBefore(playerFragment, insertBeforeElement);
+            bindUIEventListeners();
+            updateUI();
+            await loadYouTubeAPI();
+            ytPlayer = new YT.Player(YOUTUBE_PLAYER_DIV_ID, {
+                height: '1', width: '1',
+                playerVars: { 'playsinline': 1, 'autoplay': 0, 'controls': 0, 'disablekb': 1, 'modestbranding': 1, 'origin': window.location.origin },
+                events: { 'onReady': onPlayerReady, 'onStateChange': onPlayerStateChange, 'onError': onPlayerError }
+            });
+        } catch (error) {
+            if (songTitleElement) songTitleElement.textContent = "Error";
+            if (artistElement) artistElement.textContent = "Could not load player.";
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeMusicPlayer);
+    } else {
+        initializeMusicPlayer();
+    }
+})();
+
+tooltipList = [
+  {searchString: "Neil Gorsuch", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Neil.jpg> Pretty Conservative, as Donald puts it. Nominating him would show a rightward shift in your adminstration."},
+  {searchString: "Merrick Garland", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Garland.jpg> You have to appease the establishment somehow, even though you hate the idea of it."},
+  {searchString: "Garland", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Garland.jpg> You have to appease the establishment somehow, even though you hate the idea of it."},
+  {searchString: "Diane Wood", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Wood.jpg> Diane is a pretty progressive pick, nominaiting her would show a leftward shift oin your administration"},
+  {searchString: "Supreme Court", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/SupremeCourt.jpeg> Bunch of old fossils who love the establishment."},
+  {searchString: "Gorsuch", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Neil.jpg> Pretty Conservative, as Donald puts it. Nominating him would show a rightward shift in your adminstration."},
+  {searchString: "Democrats", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Dems.jpg> A fundamentally confused party."},
+  {searchString: "Democrat", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Dems.jpg> A fundamentally confused party."},                 
+  {searchString: "Democratic Party", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Dems.jpg> A fundamentally confused party."},                 
+  {searchString: "Republicans", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought you were their savior. Only time will tell if they're right."},                 
+  {searchString: "Republican", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought you were their savior. Only time will tell if they're right."},                 
+  {searchString: "Republican Party", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought you were their savior. Only time will tell if they're right."},                 
+                  
+];
+
+//#endcode
 
