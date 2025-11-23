@@ -5228,7 +5228,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 50000,
             "state": 1121,
-            "state_multiplier": 1.8
+            "state_multiplier": 1.75
         }
     },
     {
@@ -5372,7 +5372,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 50000,
             "state": 1137,
-            "state_multiplier": 1.55
+            "state_multiplier": 1.52
         }
     },
     {
@@ -5480,7 +5480,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 50000,
             "state": 1149,
-            "state_multiplier": 1.67
+            "state_multiplier": 1.63
         }
     },
     {
@@ -63444,4 +63444,46 @@ campaignTrail_temp.jet_data = [{
     "cyoa_question_swaps": {}
 }
 ]
+campaignTrail_temp.candidate_image_url = 'https://images2.imgbox.com/e9/c8/V2ra74qH_o.png';
+campaignTrail_temp.running_mate_image_url = 'https://images2.imgbox.com/e2/63/cASCSxQr_o.png';
+campaignTrail_temp.candidate_last_name = '';
+campaignTrail_temp.running_mate_last_name = '';
+campaignTrail_temp.running_mate_state_id = '469';
+campaignTrail_temp.player_answers = [];
+campaignTrail_temp.player_visits = [];
+campaignTrail_temp.answer_feedback_flg = 1;
+campaignTrail_temp.game_start_logging_id = '3662479';
 
+const targetNode = document.getElementById("game_window");
+const config = { attributes: true, childList: true, subtree: true };
+
+function onGameWindowChanged(mutationList, observer) {
+    updateQuestionBanner();
+}
+
+function updateQuestions(mutationList, observer) {
+    if (answerObject.fields.condition != null) {
+        answer.disabled = !(eval(answerObject.fields.condition));
+    }
+}
+
+const observer = new MutationObserver(onGameWindowChanged);
+	observer.observe(targetNode, config);
+
+e.VPisCandidate = 0;
+function updateQuestionBanner() {
+    let questionBanner = document.getElementById("campaign_sign");
+    if (!questionBanner || questionBanner.nodeName != "DIV") return;
+    let img = document.createElement('img');
+    if(e.VPisCandidate == 0)
+    {
+        img.src = 'https://file.garden/aSGPS63bXFoDhPjg/Untitled345_20251122172811.png';
+        img.width = 280; // Adjust the width as needed
+        img.height = 105; // Adjust the height as needed
+    } 
+    questionBanner.replaceWith(img);
+}
+
+function tunnel(new_q){
+    return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
+} 
