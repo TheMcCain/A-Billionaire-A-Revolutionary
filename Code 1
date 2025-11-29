@@ -288,7 +288,7 @@ function addDynamicCSS() {
       font-weight: 600;
       font-style: italic;
       text-align: center;
-      padding: 18px 28px;
+      padding: 14px 26px;
       border-radius: 20px;
       border: 1px solid rgba(0,0,0,0.08);
       position: absolute;
@@ -1297,10 +1297,11 @@ tooltipList = [
   {searchString: "Democrats", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Dems.jpg> A fundamentally confused party."},
   {searchString: "Democrat", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Dems.jpg> A fundamentally confused party."},                 
   {searchString: "Democratic Party", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Dems.jpg> A fundamentally confused party."},                 
-  {searchString: "Republicans", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought you were their savior. Only time will tell if they're right."},                 
-  {searchString: "Republican", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought you were their savior. Only time will tell if they're right."},                 
-  {searchString: "Republican Party", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought you were their savior. Only time will tell if they're right."},                 
-                  
+  {searchString: "Republicans", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought Donald was their savior. Only time will tell if they're right."},                 
+  {searchString: "Republican", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought Donald was their savior. Only time will tell if they're right."},                 
+  {searchString: "Republican Party", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought Donald was their savior. Only time will tell if they're right."},                 
+  {searchString: "DEMOCRATS", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Dems.jpg> A fundamentally confused party."},
+  {searchString: "REPUBLICANS", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought Donald was their savior. Only time will tell if they're right."},                 
 ];
 
 //#endcode
