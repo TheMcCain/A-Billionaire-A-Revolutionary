@@ -63440,7 +63440,7 @@ campaignTrail_temp.jet_data = [{
     "cyoa_question_swaps": {}
 }
 ]
-campaignTrail_temp.candidate_image_url = 'https://images2.imgbox.com/e9/c8/V2ra74qH_o.png';
+campaignTrail_temp.candidate_image_url = 'https://i.postimg.cc/gJqfKVNn/image.png';
 campaignTrail_temp.running_mate_image_url = 'https://images2.imgbox.com/e2/63/cASCSxQr_o.png';
 campaignTrail_temp.candidate_last_name = '';
 campaignTrail_temp.running_mate_last_name = '';
