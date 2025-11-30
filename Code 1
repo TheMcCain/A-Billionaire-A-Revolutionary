@@ -380,7 +380,6 @@ function appendStyle() {
         document.head.appendChild(metaTag);
     }
 
-    // Custom styles here
     if (!document.querySelector('#radio-option-style')) {
         const style = document.createElement('style');
         style.id = 'radio-option-style';
@@ -476,6 +475,21 @@ body {
   overflow: hidden;
   width: 50%;
 }
+
+		.inner_window_question {
+            height: auto;
+		}
+		.inner_window_question .inner_inner_window {
+            height: auto;
+		}
+		.inner_window_question .inner_inner_window .question_form {
+            height: auto;
+		}
+
+.overlay_window {
+            height: auto;
+		}
+
 
 #visit_content {
   height: auto;
