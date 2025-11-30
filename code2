@@ -1,7 +1,6 @@
 
 campaignTrail_temp.cyoa = true;
 
-// pk -> index lookup for questions
 let _questionIdxByPk = null;
 
 function _rebuildQuestionIdxMap() {
@@ -12,7 +11,6 @@ function _rebuildQuestionIdxMap() {
   }
 }
 
-// returns the true array index (>= 0) or -1 if not found
 function getQuestionIndexFromPk(pk) {
   const n = Number(pk);
   if (!_questionIdxByPk) _rebuildQuestionIdxMap();
@@ -26,13 +24,11 @@ function getQuestionIndexFromPk(pk) {
   return idx ?? -1;
 }
 
-// index to assign into question_number before nextQuestion()
 function getJumpIndexFromPk(pk) {
   const idx = getQuestionIndexFromPk(pk);
   return idx >= 0 ? idx - 1 : -1;
 }
 
-// for backwards compatibility
 function getQuestionNumberFromPk(pk) {
   return getJumpIndexFromPk(pk);
 }
@@ -95,8 +91,8 @@ function answerSwapper(pk1, pk2, takeEffects = true) {
     }
 }
 
-// CYOA Variables
-var songchange = 0;
+// Variables
+var songChange = 0;
 var TrumpLeft = 0;
 var Unity = 0;
 var BernieRight = 0;
@@ -63316,7 +63312,7 @@ campaignTrail_temp.jet_data = [{
     "cyoa_variables": {
         "1760264036384": {
             "id": 1760264036384,
-            "name": "songchange",
+            "name": "songChange",
             "defaultValue": 0
         },
         "1760264041236": {
