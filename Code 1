@@ -476,6 +476,21 @@ body {
   width: 50%;
 }
 
+
+input[type="radio"] {
+    transform: scale(0.85);
+    margin: 0 4px 0 0;
+    vertical-align: text-top; /* keeps text aligned to top of scaled radio */
+}
+
+input[type="radio"] + label {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    max-width: 100%;
+    margin-bottom: 2px;
+}
+
+
 		.inner_window_question {
             height: auto;
 		}
