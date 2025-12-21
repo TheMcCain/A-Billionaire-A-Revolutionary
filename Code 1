@@ -229,8 +229,16 @@ jet_data = {
 campaignTrail_temp.achievements = {
     "Scott Free? Not Today." : {
         "image" : "https://file.garden/aPF6sdg4jk-629YB/ScottFree.png",
-        "description" : "Description"
-    }
+        "description" : "Defeat the maple moderate as Trump and Sanders.",
+    },
+    "No Kings" : {
+        "image" : "https://file.garden/aPF6sdg4jk-629YB/No_Kings.png",
+        "description" : " as Trump and Sanders, deny a king his crown.",
+    },
+    "Tis better to have loved, and lost!" : {
+        "image" : "https://file.garden/aPF6sdg4jk-629YB/No_Kings.png",
+        "description" : " as Bernie, go full leftist and lose.",
+    },
 }
 
 corrr = '\n              <h2>Easter Egg.</h2>\n            ';
@@ -1454,3 +1462,12 @@ tooltipList = [
 
 //#endcode
 
+campaignTrail_temp.modBoxTheme = {
+     "header_color": "#215673",
+     "header_text_color": "#000000",
+     "description_text_color": "#000000",
+     "description_background_color": "#ffffff",
+     "main_color": "#00304e",
+     "secondary_color": "#ee493b",
+     "ui_text_color": "#FFFFFF"
+}
