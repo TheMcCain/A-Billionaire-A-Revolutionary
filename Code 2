@@ -127,7 +127,7 @@ cyoAdventure = function (a) {
     }
 
     // +1 Movement
-    if (ans == 6116) {
+    if (ans == 6116 || ans == 6109) {
         Movement += 1;
     }
 
@@ -301,6 +301,15 @@ campaignTrail_temp.questions_json = [
         }
     },
     {
+         "model": "campaign_trail.question",
+        "pk": 4167,
+        "fields": {
+            "priority": 8,
+            "description": "Opponent Q1",
+            "likelihood": 1
+        }
+    },
+    {       
         "model": "campaign_trail.question",
         "pk": 1323,
         "fields": {
@@ -319,6 +328,24 @@ campaignTrail_temp.questions_json = [
         }
     },
     {
+        "model": "campaign_trail.question",
+        "pk": 6741,
+        "fields": {
+            "priority": 9,
+            "description": "Opponent Q2",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 78656,
+        "fields": {
+            "priority": 9,
+            "description": "opponent's VP Q",
+            "likelihood": 1
+        }
+    },
+    {                 
         "model": "campaign_trail.question",
         "pk": 1311,
         "fields": {
@@ -350,7 +377,7 @@ campaignTrail_temp.questions_json = [
         "pk": 1314,
         "fields": {
             "priority": 10,
-            "description": "Donald Trump has gotten COVID-19. Is the campaign in disarray? Will he be okay?",
+            "description": "\"Donald, are you okay? You don't seem very well, like at all. Maybe you should go to the Walter Reed, you need your check-up. I'll look after the place while you're gone. Godspeed.\"",
             "likelihood": 1
         }
     },
@@ -371,7 +398,16 @@ campaignTrail_temp.questions_json = [
             "description": "Donald Trump, 45th President of the United States, is dead. Sources tell us he succumbed to COVID-19. May he Rest in Peace.",
             "likelihood": 1
         }
-    }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 67678,
+        "fields": {
+            "priority": 0,
+            "description": "Donald Trump, 45th President of the United States, is dead. Sources tell us he succumbed to COVID-19. May he Rest in Peace.",
+            "likelihood": 1
+        }
+    },    
 ]
 
 campaignTrail_temp.answers_json = [
@@ -636,7 +672,7 @@ campaignTrail_temp.answers_json = [
         "pk": 6142,
         "fields": {
             "question": 1308,
-            "description": "I'm working around the clock right now to put $2,000 into the hands of every American. We need to get the economy open again, and we need to get people spending money."
+            "description": "These partisans are the one's standing in OUR way! Won't vote for something I want because YOU'RE attached, or the other way around. It ends NOW!!! We're endorsing independents and third parties. They'll vote for what's RIGHT! Not for what's red or blue!"
         }
     },
     {
@@ -648,6 +684,14 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
+        "model": "campaign_trail.answer",
+        "pk": 56123,
+        "fields": {
+            "question": 4167,
+            "description": "put definition here"
+        }
+    },
+    {        
         "model": "campaign_trail.answer",
         "pk": 6144,
         "fields": {
@@ -664,6 +708,22 @@ campaignTrail_temp.answers_json = [
         }
     },
     {
+        "model": "campaign_trail.answer",
+        "pk": 68245,
+        "fields": {
+            "question": 6741,
+            "description": "enter definition"
+        }
+    },
+    {     
+        "model": "campaign_trail.answer",
+        "pk": 68246,
+        "fields": {
+            "question": 78656,
+            "description": "enter definition"
+        }
+    },
+    {             
         "model": "campaign_trail.answer",
         "pk": 6146,
         "fields": {
@@ -5106,7 +5166,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 50000,
             "state": 1108,
-            "state_multiplier": 1.3
+            "state_multiplier": 1.39
         }
     },
     {
@@ -5223,7 +5283,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 50000,
             "state": 1121,
-            "state_multiplier": 1.75
+            "state_multiplier": 1.52
         }
     },
     {
@@ -5367,7 +5427,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 50000,
             "state": 1137,
-            "state_multiplier": 1.52
+            "state_multiplier": 1.41
         }
     },
     {
@@ -5475,7 +5535,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 50000,
             "state": 1149,
-            "state_multiplier": 1.63
+            "state_multiplier": 1.46
         }
     },
     {
@@ -7114,7 +7174,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 6123,
             "candidate": 301,
             "affected_candidate": 301,
-            "global_multiplier": 0.001
+            "global_multiplier": -0.011
         }
     },
     {
