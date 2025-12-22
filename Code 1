@@ -1455,8 +1455,6 @@ tooltipList = [
   {searchString: "Republicans", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought Donald was their savior. Only time will tell if they're right."},                 
   {searchString: "Republican", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought Donald was their savior. Only time will tell if they're right."},                 
   {searchString: "Republican Party", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought Donald was their savior. Only time will tell if they're right."},                 
-  {searchString: "DEMOCRATS", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Dems.jpg> A fundamentally confused party."},
-  {searchString: "REPUBLICANS", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought Donald was their savior. Only time will tell if they're right."},
   {searchString: "Obamacare", explanationText: "<img src=https://file.garden/PLACEHOLDER.jpg> The healthcare law signed by Barack Obama, Republicans want to repeal it, and Democrats think it doesn't go far enough. Bernie's views on this are quite clear."},                 
 ];
 
