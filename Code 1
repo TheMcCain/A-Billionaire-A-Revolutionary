@@ -1455,7 +1455,9 @@ tooltipList = [
   {searchString: "Republicans", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought Donald was their savior. Only time will tell if they're right."},                 
   {searchString: "Republican", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought Donald was their savior. Only time will tell if they're right."},                 
   {searchString: "Republican Party", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/Reps.jpg> They thought Donald was their savior. Only time will tell if they're right."},                 
-  {searchString: "Obamacare", explanationText: "<img src=https://file.garden/PLACEHOLDER.jpg> The healthcare law signed by Barack Obama, Republicans want to repeal it, and Democrats think it doesn't go far enough. Bernie's views on this are quite clear."},                 
+  {searchString: "Obamacare", explanationText: "<img srchttps://file.garden/aPF6sdg4jk-629YB/ObamacareTooltip.jpeg=> The healthcare law signed by Barack Obama, Republicans want to repeal it, and Democrats think it doesn't go far enough. Bernie's views on this are quite clear."},
+  {searchString: "Medicare For All", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/MedicareForAllTooltip.jpg> Bernie's healthcare plan."},
+  {searchString: "Obama", explanationText: "<img src=https://file.garden/aPF6sdg4jk-629YB/ObamaABARTooltip.jpg> Former president."},                 
 ];
 
 //#endcode
