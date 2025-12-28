@@ -406,13 +406,14 @@ campaignTrail_temp.questions_json = [
             "priority": 0,
             "description": "Listen, Donald, uh, Senator King, I know him pretty well. He's a 'moderate', y'know Lieberman type, a so-called maverick. Uh, if they want to make this a "unity" ticket, they aren't doing many, uh, favours for the Democrats. This could be huge for us, and a much needed break from the media onslaught.",
             "likelihood": 1
+        }
     },
     {
         "model": "campaign_trail.question",
-        "pk": 87675,
+        "pk": 67678,
         "fields": {
             "priority": 0,
-            "description": "Angus- he's trying to steal our thunder Donald, trying to be an 'anti-establishment' figure against us. Surely, y'know, he's not serious, is he? We need to act now before this gets out of hand, quickly.",
+            "description": "Angus, he's trying to steal our thunder Donald, trying to be an 'anti-establishment' figure against us. Surely, y'know, he's not serious, is he? We need to act now before this gets out of hand, quickly.",
             "likelihood": 1
         }
     },    
