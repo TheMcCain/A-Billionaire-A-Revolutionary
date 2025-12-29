@@ -410,6 +410,7 @@ campaignTrail_temp.questions_json = [
     },    
 ]
 
+
 campaignTrail_temp.answers_json = [
     {
         "model": "campaign_trail.answer",
