@@ -404,7 +404,7 @@ campaignTrail_temp.questions_json = [
         "pk": 67678,
         "fields": {
             "priority": 0,
-            "description": "Donald Trump, 45th President of the United States, is dead. Sources tell us he succumbed to COVID-19. May he Rest in Peace.",
+            "description": "Final",
             "likelihood": 1
         }
     },    
