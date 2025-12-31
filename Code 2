@@ -404,7 +404,7 @@ campaignTrail_temp.questions_json = [
         "pk": 67678,
         "fields": {
             "priority": 0,
-            "description": "Final",
+            "description": "“Listen, Donald, uh, Senator King, I know him pretty well. He's a “moderate”, y'know Lieberman type, a so-called maverick. Uh, if they want to make this a “unity” ticket, they aren't doing many, uh, favours for the Democrats. This could be huge for us, and a much needed break from the media onslaught.”",
             "likelihood": 1
         }
     },    
