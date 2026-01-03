@@ -356,6 +356,15 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": 71452,
+        "fields": {
+            "priority": 10,
+            "description": "“Donald, we need to install calmness and stability. I’ts getting dangerously out of control, I mean, you’re the President, you and I need to do more. Talk isn’t enough. We need action, and we need it now. What should we do?”",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": 1313,
         "fields": {
             "priority": 10,
