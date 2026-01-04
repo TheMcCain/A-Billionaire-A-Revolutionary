@@ -374,6 +374,15 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
+        "pk": 37589,
+        "fields": {
+            "priority": 10,
+            "description": "“Donald, your time has come. You have your debate coming up, you need to win it, you need to turn the tables. Our country is going through something unimaginable, and we’re leading the ship. We need to steer it, and steer it now. We have to win.”",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
         "pk": 1312,
         "fields": {
             "priority": 10,
