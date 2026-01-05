@@ -752,6 +752,38 @@ campaignTrail_temp.answers_json = [
     },
     {
         "model": "campaign_trail.answer",
+        "pk": 78488,
+        "fields": {
+            "question": 71452,
+            "description": "We need law and order, its as simple as that Bernie. These THUGS think they can occupy our cities? It’s a disgrace frankly, and they’ll be HELL to pay. Trust me Bernie, I have this under control. BACK THE BLUE!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 78489,
+        "fields": {
+            "question": 71452,
+            "description": "Fine, fine, I’ll meet them, their organisation, I mean. Why bother though? They detest me, and they dislike you for being WITH ME! What would be the point Bernie, I’m half-tempted not to do it, but for you, I will, for our amazing unity. I’ll see them."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 78490,
+        "fields": {
+            "question": 71452,
+            "description": "Let’s do reform, great word, we need to do it, you’re right. The justice system is rigged, to be honest, WE NEED PEACE! I’m going to do whatever is necessary Bernard, to help things calm down. You need this just as much as I do. We’ll figure it out, it’ll be GREAT!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 78491,
+        "fields": {
+            "question": 71452,
+            "description": "All these things they say about us, why should we? CONSTANTLY ATTACKED, harrassed even. Why should we put up with this abuse? I refuse to do this Bernie, I just do, they have no idea. You’ll have to do this, I can't stand them. Just go."
+        }
+    },
+    {                                    
+        "model": "campaign_trail.answer",
         "pk": 6147,
         "fields": {
             "question": 1309,
