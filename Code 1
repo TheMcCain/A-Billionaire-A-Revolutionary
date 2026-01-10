@@ -245,8 +245,8 @@ campaignTrail_temp.achievements = {
     },
     "Someone You Never Met" : {
         "image" : "https://file.garden/aPF6sdg4jk-629YB/Someone.jpeg",
-        "description" : " as Trump, destroy Bernie electorally.",
-    },
+        "description" : " as Trump, destroy Bernie electorally."
+    }
 }
 
 corrr = '\n              <h2>Easter Egg.</h2>\n            ';
