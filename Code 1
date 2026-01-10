@@ -232,12 +232,20 @@ campaignTrail_temp.achievements = {
         "description" : "Defeat the maple moderate as Trump and Sanders.",
     },
     "No Kings" : {
-        "image" : "https://file.garden/aPF6sdg4jk-629YB/No_Kings.png",
+        "image" : "https://file.garden/aPF6sdg4jk-629YB/NoKing2.jpeg",
         "description" : " as Trump and Sanders, deny a king his crown.",
     },
     "Tis better to have loved, and lost!" : {
-        "image" : "https://file.garden/aPF6sdg4jk-629YB/No_Kings.png",
+        "image" : "https://file.garden/aPF6sdg4jk-629YB/tsbetter.png",
         "description" : " as Bernie, go full leftist and lose.",
+    },
+    "Dead End" : {
+        "image" : "https://file.garden/aPF6sdg4jk-629YB/Dead_End2.jpeg",
+        "description" : " as Trump and Sanders, beat that boy from South Bend.",
+    },
+    "Someone You Never Met" : {
+        "image" : https://file.garden/aPF6sdg4jk-629YB/Someone.jpeg"",
+        "description" : " as Trump, destroy Bernie electorally.",
     },
 }
 
