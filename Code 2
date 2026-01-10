@@ -32,6 +32,10 @@ function getQuestionNumberFromPk(pk) {
   return getJumpIndexFromPk(pk);
 }
 
+function tunnel(new_q){
+    return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
+} 
+
 function questionSwapper(pk1, pk2) {
     const questionData = campaignTrail_temp.questions_json;
     
@@ -97,9 +101,29 @@ var Unity = 0;
 var BernieRight = 0;
 var Movement = 0;
 var Wins = 0;
+e.noCounter = 0
+
+campaignTrail_temp.candidate_image_url = 'https://images2.imgbox.com/e2/63/cASCSxQr_o.png';
+campaignTrail_temp.running_mate_image_url = 'https://i.postimg.cc/gJqfKVNn/image.png';
 
 cyoAdventure = function (a) {
     ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
+        e.noCounter += 1;
+
+const imgA = 'https://i.postimg.cc/gJqfKVNn/image.png';
+const imgB = 'https://images2.imgbox.com/e2/63/cASCSxQr_o.png';
+
+  campaignTrail_temp.candidate_image_url = imgA;
+  campaignTrail_temp.running_mate_image_url = imgB;
+
+if (e.noCounter % 2 === 1) {
+  campaignTrail_temp.candidate_image_url = imgA;
+  campaignTrail_temp.running_mate_image_url = imgB;
+} else {
+  campaignTrail_temp.candidate_image_url = imgB;
+  campaignTrail_temp.running_mate_image_url = imgA;
+}
+
 
     // +1 Unity
     if (ans == 6109 || ans == 6110 || ans == 6111 || ans == 6112 || ans == 6114 || ans == 6115) {
@@ -63550,8 +63574,7 @@ campaignTrail_temp.jet_data = [{
     "cyoa_question_swaps": {}
 }
 ]
-campaignTrail_temp.candidate_image_url = 'https://i.postimg.cc/gJqfKVNn/image.png';
-campaignTrail_temp.running_mate_image_url = 'https://images2.imgbox.com/e2/63/cASCSxQr_o.png';
+
 campaignTrail_temp.candidate_last_name = '';
 campaignTrail_temp.running_mate_last_name = '';
 campaignTrail_temp.running_mate_state_id = '469';
@@ -63589,10 +63612,6 @@ function updateQuestionBanner() {
     } 
     questionBanner.replaceWith(img);
 }
-
-function tunnel(new_q){
-    return e.questions_json[e.questions_json.map(f=>f.pk).indexOf(new_q)];
-} 
 
 // This loads up the achievements for the mod. (ignore that i stole this from a lifetime of this lmao
 let unlockedAchievements = JSON.parse(localStorage.getItem("unlockedAch")) || {};
