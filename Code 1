@@ -244,7 +244,7 @@ campaignTrail_temp.achievements = {
         "description" : " as Trump and Sanders, beat that boy from South Bend.",
     },
     "Someone You Never Met" : {
-        "image" : https://file.garden/aPF6sdg4jk-629YB/Someone.jpeg"",
+        "image" : "https://file.garden/aPF6sdg4jk-629YB/Someone.jpeg",
         "description" : " as Trump, destroy Bernie electorally.",
     },
 }
