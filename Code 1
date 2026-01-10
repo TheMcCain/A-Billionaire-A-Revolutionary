@@ -36,7 +36,7 @@ credits = function() {
     alert(text)
   }
 
-campaignTrail_temp.credits = "<button onclick='credits()'><u>Credits</button></u>";
+campaignTrail_temp.credits = "<button onclick='credits()'><u>The <u>ABAR</u> Team</button></u>";
 
 campaignTrail_temp.global_parameter_json = [
     {
@@ -623,7 +623,17 @@ input[type="radio"] + label {
     max-width: 100%;
     margin-bottom: 2px;
 }
-
+form[name="election_year"],
+form[name="candidate"],
+form[name="running mate"],
+form[name="game_type_selection"],
+form[name="difficulty_level_selection"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem; 
+    margin-top: 0.5rem;
+}
 
 		.inner_window_question {
             height: auto;
