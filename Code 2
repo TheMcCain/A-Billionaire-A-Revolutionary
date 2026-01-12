@@ -101,6 +101,7 @@ var Unity = 0;
 var BernieRight = 0;
 var Movement = 0;
 var Wins = 0;
+var Rebirth = 0;
 e.noCounter = 0
 
 // Variable Headquarters c/o W. Team (TTNW code)
@@ -467,6 +468,28 @@ if (e.noCounter % 2 === 1) {
     if (ans == 6143) {
         Unity -= 2;
     }
+	if (e.noCounter == 10 && TrumpLeft >= 2 && BernieRight >= 2 && Wins > 3) {
+		Rebirth++;
+	}
+	if (e.noCounter == 15) {
+		if (Rebirth == 0) {
+			campaignTrail_temp.candidate_json[2].fields.first_name = "Bernard"
+        	campaignTrail_temp.candidate_json[2].fields.last_name = "Sanders"
+		}
+		else {
+            if (TrumpLeft > 5 && BernieRight <= 0) {
+            campaignTrail_temp.candidate_json[2].fields.first_name = "Phil"
+        	campaignTrail_temp.candidate_json[2].fields.last_name = "Scott" 
+            campaignTrail_temp.candidate_json[3].fields.first_name = "Hillary"
+        	campaignTrail_temp.candidate_json[3].fields.last_name = "Clinton" 
+            }
+			 else if (TrumpLeft > 3 && BernieRight < 3) {
+            campaignTrail_temp.candidate_json[2].fields.first_name = "Michael"
+        	campaignTrail_temp.candidate_json[2].fields.last_name = "Bloomberg" 
+            }
+            
+		}
+	}
 }
 
 campaignTrail_temp.questions_json = [
