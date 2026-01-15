@@ -213,16 +213,17 @@ function openSurrogates() {
         popOutMenu.style.position = 'absolute';
         popOutMenu.style.width = '430px';
         popOutMenu.style.height = '530px';
-        popOutMenu.style.backgroundColor = '#FFFFFF';
-        popOutMenu.style.border = '3px solid #CA394A'; // RED ZONE
-        popOutMenu.style.boxShadow = '0 8px 22px rgba(0,0,0,0.18)';
-        popOutMenu.style.zIndex = '1000';
+        popOutMenu.style.background = 'linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%)';
+        popOutMenu.style.border = '3px solid #BFDFF3'; // RED ZONE
+        popOutMenu.style.boxShadow = '0 12px 30px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.7)';        popOutMenu.style.zIndex = '1000';
         popOutMenu.style.fontFamily = '"Segoe UI", Arial, sans-serif';
 
         /* ===== RED HEADER ===== */
         const header = document.createElement('div');
-        header.style.backgroundColor = '#CA394A';
-        header.style.color = '#FFFFFF';
+        header.style.background = 'linear-gradient(180deg, #BFDFF3 0%, #FEFEFE 100%)';
+        header.style.boxShadow = 'inset 0 -2px 0 rgba(255,255,255,0.2)';
+        header.style.letterSpacing = '0.3px';
+        header.style.color = '#000000';
         header.style.padding = '12px';
         header.style.textAlign = 'center';
         header.style.fontSize = '22px';
@@ -237,7 +238,6 @@ function openSurrogates() {
         overview.style.padding = '10px 14px';
         overview.style.fontSize = '14px';
         overview.style.backgroundColor = '#FFFFFF';
-        overview.style.borderBottom = '2px solid #34B4F6'; // BLUE SEPARATOR
         popOutMenu.appendChild(overview);
 
         /* ===== BLUE BODY ===== */
@@ -248,7 +248,7 @@ function openSurrogates() {
         menuListA.style.right = '0';
         menuListA.style.bottom = '60px';
         menuListA.style.backgroundColor = '#F3F9FD'; // BLUE ZONE
-        menuListA.style.borderTop = '3px solid #34B4F6';
+        menuListA.style.borderTop = '3px solid #CAE4F5';
         menuListA.style.overflowY = 'auto';
         popOutMenu.appendChild(menuListA);
 
@@ -270,7 +270,7 @@ function openSurrogates() {
             photo.style.height = '86px';
             photo.style.width = '86px';
             photo.style.objectFit = 'cover';
-            photo.style.border = '1px solid #000';
+            photo.style.border = '1px solid #CAE4F5';
             photo.style.marginRight = '8px';
             row.appendChild(photo);
 
@@ -329,7 +329,6 @@ function openSurrogates() {
 
     popOutMenu.style.display = 'block';
 }
-
 
 
 function closeSurrogates() {
