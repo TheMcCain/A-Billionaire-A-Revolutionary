@@ -63380,141 +63380,156 @@ var Movement = 0;
 var Wins = 0;
 var Rebirth = 0;
 e.noCounter = 0
-var Corporate = 0;
-var Ideology = 0;
-var Russia = 0;
-var Resigned = 0;
-var BernieOppoResearch = 0;
-var BernieInvestigation = 0;
-var RussiaInvestigation = 0;
-var TrumpInvestigation = 0;
-var JordanInvestigation = 0;
-var Judge = 0;
-var ThirdPartyBoost = 0;
-var SpecialEnding = 0;
+
+// remove all the variables below this
+
+var RFKwon = 0;
 var songChange = 0;
+var cast = ""
+var eminence = 0;
+var badShit = 0;
+var econCrash = 0;
+var cult_support = 0;
+var south_support = 0;
+var achievements = 0;
+var vietnam = 0;
+var opposition = 0;
+var economy = 0;
+var raceriots = 0;
+var republican = 0;
+var bumpkin = 0;
+var fairy = 0;
+var fbipowers = 0;
+var mccarthyscary = 0;
+var midterms = 0;
+var shot = 0;
+var jackWatching = 0;
+var wallaceveep = 0;
+var CONTINGENT = null;
+var ad = 0;
+var endingChanged = 0;
+var debug = false;
+var resetPage = false
 
-// Variable Headquarters c/o W. Team (TTNW code)
-const CorporateMap = {
-    "-7": `The corporate class is <span style="color: #880808;"><strong>finished</strong></span>. (<span style="color: #880808;"><strong>-7</strong></span>)`,
-    "-6": `The corporate class is <span style="color: #CD1025;"><strong>pissed</strong></span>. (<span style="color: #CD1025;"><strong>-6</strong></span>)`,
-    "-5": `The corporate class is <span style="color: #FB6723;"><strong>concerned</strong></span>. (<span style="color: #FB6723;"><strong>-5</strong></span>)`,
-    "-4": `The corporate class is <span style="color: #FB6723;"><strong>concerned</strong></span>. (<span style="color: #FB6723;"><strong>-4</strong></span>)`,
-    "-3": `The corporate class is <span style="color: #FB6723;"><strong>concerned</strong></span>. (<span style="color: #FB6723;"><strong>-3</strong></span>)`,
-    "-2": `The corporate class is <span style="color: #FB6723;"><strong>concerned</strong></span>. (<span style="color: #FB6723;"><strong>-2</strong></span>)`,
-    "-1": `The corporate class is <span style="color: #FB6723;"><strong>concerned</strong></span>. (<span style="color: #FB6723;"><strong>-1</strong></span>)`,
-    "0": `The corporate class is <span style="color: #DEB83E;"> <strong>content</strong></span>. (<span style="color: #DEB83E;"><strong>0</strong></span>)`,
-    "1": `The corporate class is <span style="color: #DEB83E;"> <strong>content</strong></span>. (<span style="color: #DEB83E;"><strong>1</strong></span>)`,
-    "2": `The corporate class is <span style="color: #DEB83E;"> <strong>content</strong></span>. (<span style="color: #DEB83E;"><strong>2</strong></span>)`,
-    "3": `The corporate class is <span style="color: #DEB83E;"> <strong>content</strong></span>. (<span style="color: #DEB83E;"><strong>3</strong></span>)`,
-    "4": `The corporate class is <span style="color: #6DCF1F;"><strong>pleased</strong></span>. (<span style="color: #6DCF1F;"><strong>4</strong></span>)`,
-    "5": `The corporate class is <span style="color: #6DCF1F;"><strong>pleased</strong></span>. (<span style="color: #6DCF1F;"><strong>5</strong></span>)`,
-    "6": `The corporate class is <span style="color: #6DCF1F;"><strong>pleased</strong></span>. (<span style="color: #6DCF1F;"><strong>6</strong></span>)`,
-    "7": `The corporate class is <span style="color: #6DCF1F;"><strong>pleased</strong></span>. (<span style="color: #6DCF1F;"><strong>7</strong></span>)`,
-    "8": `The corporate class is <span style="color: #57AB59;"><strong>satisfied</strong></span>. (<span style="color: #57AB59;"><strong>8</strong></span>)`,
-    "9": `The corporate class is <span style="color: #57AB59;"><strong>satisfied</strong></span>. (<span style="color: #57AB59;"><strong>9</strong></span>)`,
-    "10": `The corporate class is <span style="color: #57AB59;"><strong>satisfied</strong></span>. (<span style="color: #57AB59;"><strong>10</strong></span>)`,
+
+const achievementsMap = {
+    "0": `The Administration has had <i><span style="color: #821F14;">no</i></span> <b>national successes</b>. (<span style="color:#821F14;">0</span>)`,
+    "1": `The Administration has had <i><span style="color: #CEA665;">few</i></span> <b>national successes</b>. (<span style="color:#CEA665;">1</span>)`,
+    "2": `The Administration has had <i><span style="color: #CEA665;">notable</i></span> <b>national successes</b>. (<span style="color:#CEA665;">2</span>)`,
+    "3": `The Administration has had <i><span style="color: #1C5B22;">tons</i></span> of <b>national successes</b>. (<span style="color:#1C5B22;">3</span>)`,
+    "4": `The Administration has had <i><span style="color: #1C5B22;">tons</i></span> of <b>national successes</b>. (<span style="color:#1C5B22;">4</span>)`,
+    "5": `The Administration has had <i><span style="color: #1C5B22;">tons</i></span> of <b>national successes</b>. (<span style="color:#1C5B22;">5</span>)`,
+    "6": `The Administration has had <i><span style="color: #1C5B22;">tons</i></span> of <b>national successes</b>. (<span style="color:#1C5B22;">6</span>)`,
+    "7": `The Administration has had <i><span style="color: #1C5B22;">tons</i></span> of <b>national successes</b>. (<span style="color:#1C5B22;">7</span>)`,
+    "8": `The Administration has had <i><span style="color: #1C5B22;">tons</i></span> of <b>national successes</b>. (<span style="color:#1C5B22;">8</span>)`,
+    "9": `The Administration has had <i><span style="color: #1C5B22;">tons</i></span> of <b>national successes</b>. (<span style="color:#1C5B22;">9</span>)`,
 };
-const IdeologyMap = {
-    "-7": `You are seen as a <span style="color: #CD1025;"><strong>RINO</strong></span>. (<span style="color: #CD1025;"><strong>-7</strong></span>)`,
-    "-6": `You are seen as <span style="color: #FB6723;"><strong>too moderate</strong></span>. (<span style="color: #FB6723;"><strong>-6</strong></span>)`,
-    "-5": `You are seen as <span style="color: #FB6723;"><strong>too moderate</strong></span>. (<span style="color: #FB6723;"><strong>-5</strong></span>)`,
-    "-4": `You are seen as a <span style="color: #DEB83E;"><strong>moderate</strong></span>. (<span style="color: #DEB83E;"><strong>-4</strong></span>)`,
-    "-3": `You are seen as a <span style="color: #DEB83E;"><strong>moderate</strong></span>. (<span style="color: #DEB83E;"><strong>-3</strong></span>)`,
-    "-2": `You are seen as <span style="color: #6DCF1F;"> <strong>shying away</strong></span> from conservative values. (<span style="color: #6DCF1F;"><strong>-2</strong></span>)`,
-    "-1": `You are seen as <span style="color: #6DCF1F;"> <strong>shying away</strong></span> from conservative values. (<span style="color: #6DCF1F;"><strong>-1</strong></span>)`,
-    "0": `You are seen as <span style="color: #57AB59;"> <strong>generally conservative</strong></span>. (<span style="color: #57AB59;"><strong>0</strong></span>)`,
-    "1": `You are seen as <span style="color: #57AB59;"> <strong>generally conservative</strong></span>. (<span style="color: #57AB59;"><strong>1</strong></span>)`,
-    "2": `You are seen as <span style="color: #6DCF1F;"> <strong>increasingly conservative</strong></span>. (<span style="color: #6DCF1F;"><strong>2</strong></span>)`,
-    "3": `You are seen as <span style="color: #6DCF1F;"> <strong>increasingly conservative</strong></span>. (<span style="color: #6DCF1F;"><strong>3</strong></span>)`,
-    "4": `You are seen as <span style="color: #6DCF1F;"> <strong>increasingly conservative</strong></span>. (<span style="color: #6DCF1F;"><strong>4</strong></span>)`,
-    "5": `You are seen as <span style="color: #6DCF1F;"> <strong>increasingly conservative</strong></span>. (<span style="color: #6DCF1F;"><strong>5</strong></span>)`,
-    "6": `You are seen as <span style="color: #DEB83E;"> <strong>conservative</strong></span>. (<span style="color: #DEB83E;"><strong>6</strong></span>)`,
-    "7": `You are seen as <span style="color: #DEB83E;"> <strong>conservative</strong></span>. (<span style="color: #DEB83E;"><strong>7</strong></span>)`,
-    "8": `You are seen as <span style="color: #DEB83E;"> <strong>conservative</strong></span>. (<span style="color: #DEB83E;"><strong>8</strong></span>)`,
-    "9": `You are seen as <span style="color: #DEB83E;"> <strong>conservative</strong></span>. (<span style="color: #DEB83E;"><strong>9</strong></span>)`,
-    "10": `You are seen as <span style="color: #FB6723;"> <strong>too conservative</strong></span>. (<span style="color: #FB6723;"><strong>10</strong></span>)`,
-    "11": `You are seen as <span style="color: #FB6723;"> <strong>too conservative</strong></span>. (<span style="color: #FB6723;"><strong>11</strong></span>)`,
-    "12": `You are seen as <span style="color: #FB6723;"> <strong>too conservative</strong></span>. (<span style="color: #FB6723;"><strong>12</strong></span>)`,
-    "13": `You are seen as <span style="color: #FB6723;"> <strong>too conservative</strong></span>. (<span style="color: #FB6723;"><strong>13</strong></span>)`,
-    "14": `You are seen as <span style="color: #CD1025;"> <strong>far-right</strong></span>. (<span style="color: #CD1025;"><strong>14</strong></span>)`,
-    "15": `You are seen as <span style="color: #CD1025;"> <strong>far-right</strong></span>. (<span style="color: #CD1025;"><strong>15</strong></span>)`,
-    "16": `You are seen as <span style="color: #CD1025;"> <strong>far-right</strong></span>. (<span style="color: #CD1025;"><strong>16</strong></span>)`,
-    "17": `You are seen as <span style="color: #CD1025;"> <strong>far-right</strong></span>. (<span style="color: #CD1025;"><strong>17</strong></span>)`,
+const eminenceMap = {
+    "-1": `We are in <i><span style="color: #821F14;">no position</i></span> to make <b>bold moves</b>. (<span style="color:#821F14;">-1</span>)`,
+    "0": `We are in <i><span style="color: #821F14;">no position</i></span> to make <b>bold moves</b>. (<span style="color:#821F14;">0</span>)`,
+    "1": `We successfully orchestrate <i><span style="color: #CEA665;">minor</i></span> <b>bold moves</b>. (<span style="color:#CEA665;">1</span>)`,
+    "2": `We successfully orchestrate <i><span style="color: #CEA665;">minor</i></span> <b>bold moves</b>. (<span style="color:#CEA665;">2</span>)`,
+    "3": `We are <i><span style="color: #CEA665;">gaining ground</i></span>. (<span style="color:#CEA665;">3</span>)`,
+    "4": `We are <i><span style="color: #CEA665;">gaining ground</i></span>. (<span style="color:#CEA665;">4</span>)`,
+    "5": `We are <i><span style="color: #CEA665;">gaining ground</i></span>. (<span style="color:#CEA665;">5</span>)`,
+    "6": `We are in <i><span style="color: #1C5B22;">total control</i></span>. (<span style="color:#1C5B22;">6</span>)`,
+    "7": `We are in <i><span style="color: #1C5B22;">total control</i></span>. (<span style="color:#1C5B22;">7</span>)`,
+    "8": `We are in <i><span style="color: #1C5B22;">total control</i></span>. (<span style="color:#1C5B22;">8</span>)`,
+    "9": `We are in <i><span style="color: #1C5B22;">total control</i></span>. (<span style="color:#1C5B22;">9</span>)`,
+    "10": `We are in <i><span style="color: #1C5B22;">total control</i></span>. (<span style="color:#1C5B22;">10</span>)`,
+    "11": `We are in <i><span style="color: #1C5B22;">total control</i></span>. (<span style="color:#1C5B22;">11</span>)`,
 };
-const RussiaMap = {
-    "-3": `Putin <span style="color: #CD1025;"><strong>laughs</strong></span> at you.`,
-    "-2": `Putin thinks you’re <span style="color:  #FB6723;"><strong>gutless</strong></span>.`,
-    "-1": `Putin thinks you’re <span style="color:  #FB6723;"><strong>gutless</strong></span>.`,
-    "0": `Putin is <span style="color: #DEB83E;"><strong>irritated</strong></span> with you.`,
-    "1": `Putin is <span style="color: #DEB83E;"><strong>irritated</strong></span> with you.`,
-    "2": `Putin is <span style="color: #DEB83E;"><strong>irritated</strong></span> with you.`,
-    "3": `Putin is <span style="color: #DEB83E;"><strong>irritated</strong></span> with you.`,
-    "4": `Putin <span style="color: #FB6723;"><strong>despises</strong></span> you.`,
-    "5": `Putin <span style="color: #FB6723;"><strong>despises</strong></span> you.`,
-    "6": `Putin <span style="color: #FB6723;"><strong>despises</strong></span> you.`,
-    "7": `Putin <span style="color: #FB6723;"><strong>despises</strong></span> you.`,
-    "8": `Putin is <span style="color: #CD1025;"><strong>hellbent</strong></span> on <span style="color: #CD1025;"><strong>destroying</strong></span> you.`,
-    "9": `World War Three has <span style="color: #880808;"><strong>begun</strong></span>.`,
+const cultSupportMap = {
+    "-11": `The <b>public</b> <i><span style="color: #821F14;">detests</i></span> our work. (<span style="color:#821F14;">-11</span>)`,
+    "-10": `The <b>public</b> <i><span style="color: #821F14;">detests</i></span> our work. (<span style="color:#821F14;">-10</span>)`,
+    "-9": `The <b>public</b> <i><span style="color: #821F14;">detests</i></span> our work. (<span style="color:#821F14;">-9</span>)`,
+    "-8": `The <b>public</b> <i><span style="color: #821F14;">detests</i></span> our work. (<span style="color:#821F14;">-8</span>)`,
+    "-7": `The <b>public</b> <i><span style="color: #821F14;">detests</i></span> our work. (<span style="color:#821F14;">-7</span>)`,
+    "-6": `The <b>public</b> <i><span style="color: #821F14;">detests</i></span> our work. (<span style="color:#821F14;">-6</span>)`,
+    "-5": `The <b>public</b> <i><span style="color: #821F14;">detests</i></span> our work. (<span style="color:#821F14;">-5</span>)`,
+    "-4": `The <b>public</b> <i><span style="color: #821F14;">detests</i></span> our work. (<span style="color:#821F14;">-4</span>)`,
+    "-3": `The <b>public</b> <i><span style="color: #821F14;">detests</i></span> our work. (<span style="color:#821F14;">-3</span>)`,
+    "-2": `The <b>public</b> <i><span style="color: #821F14;">detests</i></span> our work. (<span style="color:#821F14;">-2</span>)`,
+    "-1": `The <b>public</b> is <i><span style="color: #821F14;">against</i></span> our work. (<span style="color:#821F14;">-1</span>)`,
+    "0": `The <b>public</b> remains <i><span style="color: #CEA665;">neutral</i></span> on our work. (<span style="color:#CEA665;">0</span>)`,
+    "1": `The <b>public</b> is <i><span style="color: #CEA665;">split</i></span> on our work. (<span style="color:#CEA665;">1</span>)`,
+    "2": `The <b>public</b> is <i><span style="color: #CEA665;">encouraging</i></span> of our work. (<span style="color:#CEA665;">2</span>)`,
+    "3": `The <b>public</b> is <i><span style="color: #1C5B22;">grateful</i></span> for our work. (<span style="color:#1C5B22;">3</span>)`,
+    "4": `The <b>public</b> is <i><span style="color: #1C5B22;">grateful</i></span> for our work. (<span style="color:#1C5B22;">4</span>)`,
+    "5": `The <b>public</b> is <i><span style="color: #1C5B22;">grateful</i></span> for our work. (<span style="color:#1C5B22;">5</span>)`,
+    "6": `The <b>public</b> is <i><span style="color: #1C5B22;">grateful</i></span> for our work. (<span style="color:#1C5B22;">6</span>)`,
+    "7": `The <b>public</b> is <i><span style="color: #1C5B22;">grateful</i></span> for our work. (<span style="color:#1C5B22;">7</span>)`,
+    "8": `The <b>public</b> is <i><span style="color: #1C5B22;">grateful</i></span> for our work. (<span style="color:#1C5B22;">8</span>)`,
+    "9": `The <b>public</b> is <i><span style="color: #1C5B22;">grateful</i></span> for our work. (<span style="color:#1C5B22;">9</span>)`,
+    "10": `The <b>public</b> is <i><span style="color: #1C5B22;">grateful</i></span> for you. (<span style="color:#1C5B22;">10</span>)`,
+    "11": `The <b>public</b> is <i><span style="color: #1C5B22;">grateful</i></span> for you. (<span style="color:#1C5B22;">11</span>)`,
+    "12": `The <b>public</b> is <i><span style="color: #1C5B22;">grateful</i></span> for you. (<span style="color:#1C5B22;">12</span>)`,
 };
-const JudgeMap = {
-    "-2": `Your Supreme Court nominee has been <span style="color:  #CD1025;"><strong>blocked</strong></span>.`,
-    "-1": `You’ve <span style="color:  #CD1025;"><strong>declined</strong></span> to replace Scalia before the election.`,
-    "1": `<span style="color: #6DCF1F;"><strong>Garland</strong></span> has been confirmed to the Supreme Court.`,
-    "2": `<span style="color: #57AB59;"><strong>Sykes</strong></span> has been confirmed to the Supreme Court.`,
-    "3": `<span style="color: #57AB59;"><strong>Gorsuch</strong></span> has been confirmed to the Supreme Court.`,
+const southSupportMap = {
+    "-12": `The <b>south</b> is <i><span style="color: #821F14;">rotting</i></span>. (<span style="color:#821F14;">-12</span>)`,
+    "-11": `The <b>south</b> is <i><span style="color: #821F14;">rotting</i></span>. (<span style="color:#821F14;">-11</span>)`,
+    "-10": `The <b>south</b> is <i><span style="color: #821F14;">rotting</i></span>. (<span style="color:#821F14;">-10</span>)`,
+    "-9": `The <b>south</b> is <i><span style="color: #821F14;">rotting</i></span>. (<span style="color:#821F14;">-9</span>)`,
+    "-8": `The <b>south</b> is <i><span style="color: #821F14;">rotting</i></span>. (<span style="color:#821F14;">-8</span>)`,
+    "-7": `The <b>south</b> is <i><span style="color: #821F14;">rotting</i></span>. (<span style="color:#821F14;">-7</span>)`,
+    "-6": `The <b>south</b> is <i><span style="color: #821F14;">rotting</i></span>. (<span style="color:#821F14;">-6</span>)`,
+    "-5": `The <b>south</b> is <i><span style="color: #821F14;">rotting</i></span>. (<span style="color:#821F14;">-5</span>)`,
+    "-5": `The <b>south</b> is <i><span style="color: #821F14;">rotting</i></span>. (<span style="color:#821F14;">-5</span>)`,
+    "-4": `The <b>south</b> is <i><span style="color: #821F14;">rotting</i></span>. (<span style="color:#821F14;">-4</span>)`,
+    "-3": `The <b>south</b> is <i><span style="color: #821F14;">languishing</i></span>. (<span style="color:#821F14;">-3</span>)`,
+    "-2": `The <b>south</b> is <i><span style="color: #821F14;">languishing</i></span>. (<span style="color:#821F14;">-2</span>)`,
+    "-1": `The <b>south</b> remains a <i><span style="color: #CEA665;">thorn in our side</i></span>. (<span style="color:#CEA665;">-1</span>)`,
+    "0": `The <b>south</b> remains a <i><span style="color: #CEA665;">thorn in our side</i></span>. (<span style="color:#CEA665;">0</span>)`,
+    "1": `The <b>south</b> is <i><span style="color: #CEA665;">passive</i></span>. (<span style="color:#CEA665;">1</span>)`,
+    "2": `The <b>south</b> is <i><span style="color: #CEA665;">passive</i></span>. (<span style="color:#CEA665;">2</span>)`,
+    "3": `The <b>south</b> is an <i><span style="color: #1C5B22;">ally</i></span>. (<span style="color:#1C5B22;">3</span>)`,
+    "4": `The <b>south</b> is an <i><span style="color: #1C5B22;">ally</i></span>. (<span style="color:#1C5B22;">4</span>)`,
+    "5": `The <b>south</b> is an <i><span style="color: #1C5B22;">ally</i></span>. (<span style="color:#1C5B22;">5</span>)`,
+    "6": `The <b>south</b> is an <i><span style="color: #1C5B22;">ally</i></span>. (<span style="color:#1C5B22;">6</span>)`,
+    "7": `The <b>south</b> is an <i><span style="color: #1C5B22;">ally</i></span>. (<span style="color:#1C5B22;">7</span>)`,
+    "8": `The <b>south</b> is an <i><span style="color: #1C5B22;">ally</i></span>. (<span style="color:#1C5B22;">8</span>)`,
+    "9": `The <b>south</b> is an <i><span style="color: #1C5B22;">ally</i></span>. (<span style="color:#1C5B22;">9</span>)`,
+    "10": `The <b>south</b> is an <i><span style="color: #1C5B22;">ally</i></span>. (<span style="color:#1C5B22;">10</span>)`,
+    "11": `The <b>south</b> is an <i><span style="color: #1C5B22;">ally</i></span>. (<span style="color:#1C5B22;">11</span>)`,
+    "12": `The <b>south</b> is an <i><span style="color: #1C5B22;">ally</i></span>. (<span style="color:#1C5B22;">12</span>)`,
+    "13": `The <b>south</b> is an <i><span style="color: #1C5B22;">ally</i></span>. (<span style="color:#1C5B22;">13</span>)`,
+    "14": `The <b>south</b> is an <i><span style="color: #1C5B22;">ally</i></span>. (<span style="color:#1C5B22;">14</span>)`,
 };
-const BernieInvestigationMap = {
-    "-7": `The investigation into Bernie Sanders has <span style="color: #880808;"><strong>imploded</strong></span>.`,
-    "-6": `The investigation into Bernie Sanders has <span style="color: #880808;"><strong>imploded</strong></span>.`,
-    "-5": `The investigation into Bernie Sanders has <span style="color: #880808;"><strong>imploded</strong></span>.`,
-    "-4": `The investigation into Bernie Sanders has <span style="color: #880808;"><strong>imploded</strong></span>.`,
-    "-3": `The investigation into Bernie Sanders has <span style="color: #880808;"><strong>imploded</strong></span>.`,
-    "-2": `The investigation into Bernie Sanders has <span style="color: #880808;"><strong>imploded</strong></span>.`,
-    "-1": `Bernie Sanders has his <span style="color: #CD1025;"><strong>suspicions</strong></span>.`,
-    "1": `Bernie Sanders is <span style="color: #DEB83E;"><strong>under investigation</strong></span>.`,
-    "2": `The public is <span style="color: #DEB83E;"><strong>aware</strong></span> that Bernie Sanders is <span style="color: #DEB83E;"><strong>under investigation</strong></span>.`,
-    "3": `Tulsi Gabbard has been <span style="color: #FB6723;"><strong>wiretapped</strong></span>.`,
-    "4": `Tulsi Gabbard has been <span style="color: #FB6723;"><strong>wiretapped</strong></span> and the recordings have been <span style="color: #FB6723;"><strong>leaked</strong></span>.`,
-    "5": `Bernie Sanders has been <span style="color: #6DCF1F;"><strong>exposed</strong></span> as a Russian asset.`,
-    "6": `Bernie Sanders has been <span style="color: #6DCF1F;"><strong>arrested</strong></span>.`,
-    "7": `Bernie Sanders has been <span style="color: #6DCF1F;"><strong>arrested</strong></span>.`,
-    "8": `Bernie Sanders has been <span style="color: #6DCF1F;"><strong>arrested</strong></span>.`,
-    "9": `Bernie Sanders has been <span style="color: #6DCF1F;"><strong>arrested</strong></span>.`,
-    "10": `Bernie Sanders has been <span style="color: #6DCF1F;"><strong>arrested</strong></span>.`,
-    "11": `Bernie Sanders has been <span style="color: #6DCF1F;"><strong>arrested</strong></span>.`,
+const vietnamMap = {
+    "-1": `The situation in <b>Vietnam</b> is <i><span style="color: #821F14;">a crisis</i></span>. (<span style="color:#821F14;">-1</span>)`,
+    "0": `The situation in <b>Vietnam</b> is <i><span style="color: #CEA665;">deteriorating</i></span>. (<span style="color:#CEA665;">0</span>)`,
+    "1": `The situation in <b>Vietnam</b> is <i><span style="color: #CEA665;">stalled</i></span>. (<span style="color:#CEA665;">1</span>)`,
+    "2": `The situation in <b>Vietnam</b> is <i><span style="color: #CEA665;">creaking</i></span>. (<span style="color:#CEA665;">2</span>)`,
+    "3":  `The situation in <b>Vietnam</b> is <i><span style="color: #1C5B22;">progressing</i></span>. (<span style="color:#1C5B22;">3</span>)`,
+    "4":  `The situation in <b>Vietnam</b> is <i><span style="color: #1C5B22;">not our concern</i></span>. (<span style="color:#1C5B22;">4</span>)`,
 };
-const JordanInvestigationMap = {
-    "-1": `The attempt to blackmail Jim Jordan has <span style="color: #CD1025;"><strong>backfired</strong></span>.`,
-    "1": `Opposition research is being <span style="color: #DEB83E;"><strong>collected</strong></span> on Jim Jordan.`,
-    "2": `Jim Jordan has been <span style="color: #6DCF1F;"><strong>exposed</strong></span>.`,
-    "3": `Jim Jordan's career has been <span style="color: #6DCF1F;"><strong>destroyed</strong></span>.`,
-    "4": `Jim Jordan has been <span style="color: #6DCF1F;"><strong>blackmailed</strong></span>.`,
-    "5": `Jim Jordan has been <span style="color: #6DCF1F;"><strong>blackmailed</strong></span>, even issuing an <span style="color: #57AB59;"><strong>endorsement</strong></span>.`,
-};
-const TrumpInvestigationMap = {
-    "-1": `The investigation into Donald Trump has <span style="color: #880808;"><strong>imploded</strong></span>.`,
-    "1": `Donald Trump is <span style="color: #DEB83E;"><strong>under investigation</strong></span>.`,
-    "2": `The public is <span style="color: #DEB83E;"><strong>aware</strong></span> that Donald Trump is <span style="color: #DEB83E;"><strong>under investigation</strong></span>.`,
-    "3": `Michael Flynn has been <span style="color: #6DCF1F;"><strong>arrested</strong></span>.`,
-    "4": `Donald Trump has been <span style="color: #6DCF1F;"><strong>arrested</strong></span>.`,
-};
-const ResignedMap = {
-    "-3": `You have <span style="color: #FB6723;"><strong>fought off</strong></span> impeachment.`,
-    "-2": `You have been <span style="color: #FB6723;"><strong>acquitted</strong></span> by the Senate.`,
-    "-1": `You have been <span style="color: #CD1025;"><strong>impeached</strong></span>.`,
-    "1": `Mitt Romney has <span style="color: #880808;"><strong>suspended his campaign</strong></span>.`,
-    "2": `Mitt Romney has <span style="color: #880808;"><strong>resigned</strong></span>.`,
-    "3": `Mitt Romney has <span style="color: #880808;"><strong>resigned</strong></span> following impeachment.`,
-    "4": `Both Mitt Romney and Tim Pawlenty have <span style="color: #880808;"><strong>resigned</strong></span>.`,
-    "5": `Mitt Romney has been <span style="color: #880808;"><strong>convicted and removed</strong></span> from office.`,
-    "6": `Without a presidential candidate, running mate or party chair, the GOP has <span style="color: #880808;"><strong>imploded</strong></span>.`,
+const economyMap = {
+    "-10": `The <b>economy</b> is in <i><span style="color: #821F14;">crisis</i></span>. (<span style="color:#821F14;">-10</span>)`,
+    "-9": `The <b>economy</b> is in <i><span style="color: #821F14;">crisis</i></span>. (<span style="color:#821F14;">-9</span>)`,
+    "-8": `The <b>economy</b> is in <i><span style="color: #821F14;">crisis</i></span>. (<span style="color:#821F14;">-8</span>)`,
+    "-7": `The <b>economy</b> is in <i><span style="color: #821F14;">crisis</i></span>. (<span style="color:#821F14;">-7</span>)`,
+    "-6": `The <b>economy</b> is in <i><span style="color: #821F14;">crisis</i></span>. (<span style="color:#821F14;">-6</span>)`,
+    "-5": `The <b>economy</b> is in <i><span style="color: #821F14;">crisis</i></span>. (<span style="color:#821F14;">-5</span>)`,
+    "-4": `The <b>economy</b> is <i><span style="color: #821F14;">shrinking</i></span>. (<span style="color:#821F14;">-4</span>)`,
+    "-3": `The <b>economy</b> is <i><span style="color: #821F14;">shrinking</i></span>. (<span style="color:#821F14;">-3</span>)`,
+    "-2": `The <b>economy</b> is <i><span style="color: #821F14;">shrinking</i></span>. (<span style="color:#821F14;">-2</span>)`,
+    "-1": `The <b>economy</b> is <i><span style="color: #CEA665;">unsaturated</i></span>. (<span style="color:#CEA665;">-1</span>)`,
+    "0": `The <b>economy</b> is <i><span style="color: #CEA665;">stagnant</i></span>. (<span style="color:#CEA665;">0</span>)`,
+    "1": `The <b>economy</b> is <i><span style="color: #CEA665;">saturated</i></span>. (<span style="color:#CEA665;">1</span>)`,
+    "2": `The <b>economy</b> is <i><span style="color: #CEA665;">saturated</i></span>. (<span style="color:#CEA665;">2</span>)`,
+    "3": `The <b>economy</b> is <i><span style="color: #1C5B22;">growing</i></span>. (<span style="color:#1C5B22;">3</span>)`,
+    "4": `The <b>economy</b> is <i><span style="color: #1C5B22;">growing</i></span>. (<span style="color:#1C5B22;">4</span>)`,
+    "5": `The <b>economy</b> is <i><span style="color: #1C5B22;">growing</i></span>. (<span style="color:#1C5B22;">5</span>)`,
+    "6": `The <b>economy</b> is <i><span style="color: #1C5B22;">growing</i></span>. (<span style="color:#1C5B22;">6</span>)`,
+    "7": `The <b>economy</b> is <i><span style="color: #1C5B22;">growing</i></span>. (<span style="color:#1C5B22;">7</span>)`,
+    "8": `The <b>economy</b> is <i><span style="color: #1C5B22;">growing</i></span>. (<span style="color:#1C5B22;">8</span>)`,
+    "9": `The <b>economy</b> is <i><span style="color: #1C5B22;">growing</i></span>. (<span style="color:#1C5B22;">9</span>)`,
+    "10": `The <b>economy</b> is <i><span style="color: #1C5B22;">growing</i></span>. (<span style="color:#1C5B22;">10</span>)`,
 };
 
-let savedX = null;
-let savedY = null;
 
 function addHeadquarterButton() {
+
     // Check if the button already exists
     if (document.getElementById('headquarter_button')) {
         return;
@@ -63533,16 +63548,50 @@ function addHeadquarterButton() {
 
     newButton.style.marginLeft = '1.5em';
 
-    newButton.innerHTML = 'Campaign Warroom';
+    newButton.innerHTML = 'File';
 
     // Attach the click event listener
-    newButton.addEventListener('click', openHeadquarter);
+    newButton.addEventListener('click', openSurrogates);
 
     // Insert the new button next to the reference button
     refButton.insertAdjacentElement('afterend', newButton);
 }
 
-function openHeadquarter() {      
+const menuItemsA = [ 
+    { photo: 'https://i.imgur.com/7HEMDjv.png', text: '<b>J.E. Hoover</b><br><b>CLASS: <span style="color: #D9321E;">A</b></span><br>Hoover has worked to undermine your toils ever since you were Attorney General, and given your commitment to justice, you suspect far longer. If anything at all is clear: he must go.', button: 'Defer', id: 'HOOVER_A'},
+    { photo: 'https://i.imgur.com/wcSjvQk.png', text: '<b>Bob McNamara</b><br><b>CLASS: <span style="color: #D9321E;">A</b></span><br>The Whiz Kid is looking pretty old these days, especially after his crack-up in \'67. You hate to put a loyal dog down, but maybe it\'s time to put the bastard out of his misery.', button: 'Defer', id: 'MCNAMARA_A'},
+    { photo: 'https://i.imgur.com/T9J3MGu.png', text: '<b>Robert Byrd</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>The Klansman more or less runs the senate at this point. After beating out Muskie from leadership, Byrd has positioned himself as a roadblock to anything worthwhile of passing.', button: 'Defer', id: 'BYRD_A'},
+    { photo: 'https://i.imgur.com/fHiDe5i.png', text: '<b>John Connally</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>It was one of Johnson\'s own men that allowed you to secure the nomination back in Chicago. Serving at the head of the State Dept., the credibility he lends you wanes every passing day.', button: 'Defer', id: 'CONNALLY_A'},
+    { photo: 'https://i.imgur.com/wPJTFp3.png', text: '<b>George Wallace</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>Wallace is untempered by his previous failures, now betting on your own failure. The only deterrent would be to bend the knee such that running would be counterproductive for him.', button: 'Defer', tooltip: 'Seems to be dead-set on running unless an ardent conservative is within reach of the Republican nomination.', id: 'WALLACE_A'},
+    { photo: 'https://i.imgur.com/2dxTI6U.png', text: '<b>Eugene McCarthy</b><br><b>CLASS: <span style="color: #2DD543;">C</b></span><br>Even though he\'s supporting of the gist of your policy agenda, Yogi McCarthy just wishes it were him behind the oval. Unless there\'s simply no base for him to seize on, his eyes are set on \'72.', tooltip: 'It\'s all about ego with this guy. Doing anything to trample his popularity may steer him out of the race.', button: 'Defer', id: 'MCCARTHY_A'}
+]
+const menuItemsB = [ 
+        // A
+    { photo: 'https://i.imgur.com/ixLqwxD.png', text: '<b>Chuck Percy</b><br><b>CLASS: <span style="color: #D9321E;">A</b></span><br>The former rising star has become a red giant. If you conduct yourself in a non-ideological manner, he may be the Republicans\' best bet only candidate who could take you out.', button: 'Defer', tooltip: 'Likely to make gains off of the administration\'s achievements and your own popularity.', id: 'PERCY_A'},
+    { photo: 'https://i.imgur.com/sWQrtXJ.png', text: '<b>Nelson Rockefeller</b><br><b>CLASS: <span style="color: #D9321E;">A</b></span><br>Despite his unpopularity within his own party, Rockefeller commands an impressive resume that if compared to a failed, liberal, one of yours, may be enough for him to finally secure the GOP mantle.', button: 'Defer', tooltip: 'Likely to make gains off of the administration\'s achievements, a good economy, and potential appeals to southern institutions.', id: 'ROCKEFELLER_A'},
+    { photo: 'https://i.imgur.com/oDna8VB.png', text: '<b>Barry Goldwater</b><br><b>CLASS: <span style="color: #D9321E;">A</b></span><br>Goldwater remains a hot article among conservatives and should not be underestimated. He could be a dark horse if the mood of the country began to match his own in the absence of strong, liberal leadership.', button: 'Defer', tooltip: 'Likely to make gains off of the administration\'s achievements and a depressing economic outlook.', id: 'GOLDWATER_A'},
+        // B
+    { photo: 'https://i.imgur.com/F9XkBFG.png', text: '<b>Ted Agnew</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>The moderate recast of George Wallace has worked his way back to the public\'s eye as his presidential ambitions have grown. While GOP insiders detest him, he may be tapped if you appear vulnerable.', button: 'Defer', tooltip: 'Likely to make gains following ruptures in your popularity and distancing yourself from the south.', id: 'AGNEW_A'},
+    { photo: 'https://i.imgur.com/9BG8sNI.png', text: '<b>John Lindsay</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>It\'s like looking into a mirror. The GOP\'s own you has diverse appeal, which is exactly why he\'s unlikely to get the nomination. In that off chance, you may as well have completely rewritten the narrative.', button: 'Defer', tooltip: 'Likely to make gains off of your own popularity and potential appeals to southern institutions.', id: 'LINDSAY_A'},
+    { photo: 'https://i.imgur.com/nt4Zepx.png', text: '<b>Ronald Reagan</b><br><b>CLASS: <span style="color: #D3C683;">B</b></span><br>The idea of an ardent conservative with messaging control should make you shudder, but Reagan just isn\'t that. While good on film, his radicalism scares moderates and party insiders alike.', button: 'Defer', tooltip: 'Likely to make gains from a depressing economic outlook, ruptures in your popularity, and distancing yourself from the south.', id: 'REAGAN_A'},
+        // C
+    // { photo: 'https://i.imgur.com/QzknUMM.png', text: '<b>Richard Nixon</b><br><b>CLASS: <span style="color: #2DD543;">C</b></span><br>Nixon was once again cast out by pundits and the party alike after his past failure, but for him, failure means very little. Something inside of you screams to be wary of his ability to make a comeback.', button: 'Defer', tooltip: 'Gaining from backlash to the administration, just as he does with improvements in our standing, and drama with the south.', id: 'NIXON_A'},
+    // { photo: 'https://i.imgur.com/OYgbd5S.png', text: '<b>Sam Yorty</b><br><b>CLASS: <span style="color: #2DD543;">C</b></span><br>His nomination has hinged entirely on his personal hatred of you, proving that a large subset of voters were always at odds with you. Thankfully, he isn\'t the type to expand beyond his base.', button: 'Defer', tooltip: 'Gaining exclusively from backlash to the administration at an alarming rate.', id: 'YORTY_A'},
+    // { photo: 'https://i.imgur.com/G3KdfRv.png', text: '<b>Howard Hughes</b><br><b>CLASS: <span style="color: #2DD543;">C</b></span><br>Out of all the files on various opponents you collected over the years, Hughes was not among them. It\'s something of a miracle—the businessman who has taken the GOP by storm—but it\'s a passing fad.', button: 'Defer', tooltip: 'Gaining from backlash to the administration and a depressing economic outlook.', id: 'HUGHES_A'},
+        // Bumpkins
+    // { photo: 'https://i.imgur.com/wPJTFp3.png', text: '<b>George Wallace</b><br><b>CLASS: <span style="color: #2DD543;">C</b></span><br>It\'s of no surprise to anyone that Wallace has taken his crusade back to the American Independent Party. He may prove to be a boon in your favor if the GOP nominates a conservative.', button: 'Defer', id: 'WALLACE_A'},
+    // { photo: 'https://i.imgur.com/9URsc0A.png', text: '<b>John Rarick</b><br><b>CLASS: <span style="color: #8CBADB;">D</b></span><br>He appears to be nothing more than a third-rate Wallace, on track to perform worse than Thurmond. Although he likely pulls away some voters, it shouldn\'t be enough to affect the race.', button: 'Defer', id: 'RARICK_A'},
+    // { photo: 'https://i.imgur.com/HVlAr6M.png', text: '<b>Henry R. Perot</b><br><b>CLASS: <span style="color: #8CBADB;">D</b></span><br>XXX', button: 'Defer', id: 'PEROT_A'},
+        // Faries
+    // { photo: 'https://i.imgur.com/2dxTI6U.png', text: '<b>Eugene McCarthy</b><br><b>CLASS: <span style="color: #2DD543;">C</b></span><br>XXX', button: 'Defer', id: 'MCCARTHY_A'},
+    // { photo: 'https://i.imgur.com/S2bSB66.png', text: '<b>Ben Spock</b><br><b>CLASS: <span style="color: #8CBADB;">D</b></span><br>XXX', button: 'Defer', id: 'SPOCK_A'},
+    // { photo: 'https://i.imgur.com/QsGBNFe.png', text: '<b>Pete McCloskey</b><br><b>CLASS: <span style="color: #8CBADB;">D</b></span><br>XXX', button: 'Defer', id: 'MCCLOSKEY_A'}
+]
+
+let savedX = null;
+let savedY = null;
+
+function openSurrogates() {
     let questions = document.querySelector(".inner_window_question");
 
     // Check if the menu already exists
@@ -63558,22 +63607,22 @@ function openHeadquarter() {
         popOutMenu.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
         popOutMenu.style.border = '1px solid #ccc';
         popOutMenu.style.zIndex = '1000';
-        popOutMenu.style.backgroundImage = 'url("https://i.imgur.com/aZUBQMz.png")';
+        popOutMenu.style.backgroundImage = 'url("https://i.imgur.com/sjCE31d.png")';
         popOutMenu.style.backgroundSize = 'cover';
         popOutMenu.style.backgroundPosition = 'bottom';
         popOutMenu.style.alignItems = 'center';     
 
         // Create the menu title
         const menuTitle = document.createElement('h1');
-        menuTitle.innerText = 'Campaign Warroom';
+        menuTitle.innerText = 'File';
         menuTitle.style.textAlign = 'center';
-            menuTitle.style.fontFamily = '"BankGothic Md BT Medium", "BankGothic", sans-serif';
-            menuTitle.style.color = '#CD1025';
-            menuTitle.style.textShadow = '1px 1px 1px #000000';
-        menuTitle.style.top = '-02px';   
+            menuTitle.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+            menuTitle.style.color = '#B62C1A';
+            menuTitle.style.textShadow = '2px 2px 3px #000000';
+        menuTitle.style.top = '-04px';   
         menuTitle.style.position = 'relative';
-        menuTitle.style.marginTop = '-02px'; 
-        menuTitle.style.marginBottom = '-02px'; 
+        menuTitle.style.marginTop = '-04px'; 
+        menuTitle.style.marginBottom = '-04px'; 
         menuTitle.style.lineHeight = '0.7';
         // menuTitle.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
         menuTitle.style.padding = '2px';            
@@ -63582,9 +63631,9 @@ function openHeadquarter() {
         menuTitle.style.fontSize = '24px';
         // menuTitle.style.outline = '1px solid #0F0E0C';
         popOutMenu.appendChild(menuTitle);
-
+        
         const ov = document.createElement('h2');
-        ov.innerText = '';
+        ov.innerText = 'Overview';
         ov.style.textAlign = 'left';
         ov.style.position = 'relative';
         ov.style.marginTop = '-4px'; 
@@ -63603,36 +63652,23 @@ function openHeadquarter() {
         //<b><span style="color: #D9321E;">
         var overviewtxt  = ""
 
-        CorporateText = `${CorporateMap[String(Corporate)]}`;
-        overviewtxt += "• "+ `${CorporateText}` + "<br>";
+        achievementsText = `${achievementsMap[String(achievements)]}`;
+        overviewtxt += "• "+ `${achievementsText}` + "<br>";
         
-        IdeologyText = `${IdeologyMap[String(Ideology)]}`;
-        overviewtxt += "• "+ `${IdeologyText}` + "<br>";
+        eminenceText = `${eminenceMap[String(eminence)]}`;
+        overviewtxt += "• "+ `${eminenceText}` + "<br>";
 
-        RussiaText = `${RussiaMap[String(Russia)]}`;
-        overviewtxt += "• "+ `${RussiaText}` + "<br>";
+        cultsupportText = `${cultSupportMap[String(cult_support)]}`;
+        overviewtxt += "• "+ `${cultsupportText}` + "<br>";
 
-if(!Judge == 0){
-        JudgeText = `${JudgeMap[String(Judge)]}`;
-        overviewtxt += "• "+ `${JudgeText}` + "<br>";
-		}
-		if(!BernieInvestigation == 0){
-        BernieInvestigationText = `${BernieInvestigationMap[String(BernieInvestigation)]}`;
-        overviewtxt += "• "+ `${BernieInvestigationText}` + "<br>";
-		}
-                if(!JordanInvestigation == 0){
-        JordanInvestigationText = `${JordanInvestigationMap[String(JordanInvestigation)]}`;
-        overviewtxt += "• "+ `${JordanInvestigationText}` + "<br>";
-		}
-                if(!TrumpInvestigation == 0){
-        TrumpInvestigationText = `${TrumpInvestigationMap[String(TrumpInvestigation)]}`;
-        overviewtxt += "• "+ `${TrumpInvestigationText}` + "<br>";
-		}
+        southsupportText = `${southSupportMap[String(south_support)]}`;
+        overviewtxt += "• "+ `${southsupportText}` + "<br>";
 
-                if(!Resigned == 0){
-        ResignedText = `${ResignedMap[String(Resigned)]}`;
-        overviewtxt += "• "+ `${ResignedText}` + "<br>";
-		}
+        vietnamText = `${vietnamMap[String(vietnam)]}`;
+        overviewtxt += "• "+ `${vietnamText}` + "<br>";
+
+        economyText = `${economyMap[String(economy)]}`;
+        overviewtxt += "• "+ `${economyText}` + "<br>";
 
         const ovsubtxt = document.createElement('h3');
         ovsubtxt.innerHTML = overviewtxt;
@@ -63651,12 +63687,330 @@ if(!Judge == 0){
         ovsubtxt.style.textAlign = 'left';      
         ovsubtxt.style.paddingLeft = '10px';
         ovsubtxt.style.listStyleType = 'disc'; 
-        ovsubtxt.style.background = 'linear-gradient(rgba(64, 68, 66, 0.7), rgba(41, 44, 42, 0.4)), url("https://i.imgur.com/DqdfecZ.png")';
+        ovsubtxt.style.background = 'linear-gradient(rgba(127, 135, 131, 0.7), rgba(81, 87, 84, 0.4)), url("https://i.imgur.com/FTCMfGJ.png")';
         popOutMenu.appendChild(ovsubtxt);
+
+        const pests = document.createElement('h2');
+        pests.innerText = 'Homefront';
+            pests.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+            pests.style.color = '#B62C1A';
+            pests.style.textShadow = '2px 2px 3px #000000';
+            pests.style.fontSize = '24px';
+        pests.style.textAlign = 'right';
+        pests.style.position = 'relative';
+        pests.style.marginTop = '-4px'; 
+        pests.style.lineHeight = '0.7';
+        // pests.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
+        pests.style.padding = '2px';            
+        pests.style.borderRadius = '1px';       
+        pests.style.display = 'block';    
+        // pests.style.outline = '1px solid #0F0E0C';
+        popOutMenu.appendChild(pests);
+        
+        const pestssubtxt = document.createElement('h3');
+        pestssubtxt.innerText = 'Those working against you internally.';
+            pestssubtxt.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+            pestssubtxt.style.color = '#B62C1A';
+            pestssubtxt.style.textShadow = '2px 2px 3px #000000';
+            pestssubtxt.style.fontSize = '13px';
+        pestssubtxt.style.marginBottom = '-04px'; 
+        pestssubtxt.style.textAlign = 'right';
+        pestssubtxt.style.top = '-04px';   
+        pestssubtxt.style.position = 'relative';
+        pestssubtxt.style.marginTop = '-04px'; 
+        pestssubtxt.style.lineHeight = '0.7';
+        // pestssubtxt.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
+        // pestssubtxt.style.padding = '2px';            
+        // pestssubtxt.style.borderRadius = '1px';    
+        pestssubtxt.style.display = 'block';    
+        // pestssubtxt.style.outline = '1px solid #0F0E0C';
+        pestssubtxt.style.marginTop = '-8px';
+        popOutMenu.appendChild(pestssubtxt);
+
+        // Create the menu list
+        const menuListA = document.createElement('ul');
+        menuListA.style.listStyle = 'none';
+        menuListA.style.padding = '1px';
+        menuListA.style.maxHeight = '140px'; 
+        menuListA.style.overflowY = 'auto'; 
+        menuListA.style.outline = '1px solid #CCCCCC';
+        menuListA.style.border = '1px solid transparent';
+
+        // Add menu items from the array
+        menuItemsA.forEach(item => {
+            const menuItem = document.createElement('div');
+
+            if(item.id == "HOOVER_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/N9cq4RW.png")';
+            }
+            if(item.id == "MCNAMARA_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/KcgIOns.png")';
+            }
+            if(item.id == "BYRD_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/2VoIN3T.png")';
+            }
+            if(item.id == "CONNALLY_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/XrgZccu.png")';
+            }
+            if(item.id == "WALLACE_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/jRzdwPi.png")';
+            }
+            if(item.id == "MCCARTHY_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/ayrpOi6.png")';
+            }
+            if(item.id == "KENNEDY_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/M6AGfA3.png")';
+            }
+            
+            menuItem.style.display = 'flex';
+            menuItem.style.alignItems = 'flex-start';
+            menuItem.style.marginBottom = '5px';
+            menuItem.style.backgroundColor = 'rgba(128, 142, 142, 0.5)'; 
+            menuItem.style.padding = '1px';            
+            menuItem.style.borderRadius = '3px';     
+            menuItem.style.outline = '1px solid #0F0E0C';
+
+            const photo = document.createElement('img');
+            photo.src = item.photo;
+            photo.style.border = "1px solid #0F0E0C"; 
+            photo.style.padding = "1px"; 
+            photo.style.width = '100px';
+            photo.style.height = '100px';
+            photo.style.marginRight = '10px';
+
+            const textAndButton = document.createElement('div');
+
+            const text = document.createElement('p');
+            text.style.fontSize = "13px"; 
+            text.innerHTML = item.text; 
+            text.style.margin = '0';
+
+            textAndButton.appendChild(text);
+            menuItem.appendChild(photo);
+            menuItem.appendChild(textAndButton);
+
+            menuListA.appendChild(menuItem);
+        });
+        popOutMenu.appendChild(menuListA);
+
+        const enemies = document.createElement('h2');
+        enemies.innerText = 'Battlefront';
+            enemies.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+            enemies.style.color = '#B62C1A';
+            enemies.style.textShadow = '2px 2px 3px #000000';
+        enemies.style.fontSize = '24px';
+        enemies.style.textAlign = 'left';
+        enemies.style.top = '0px';   
+        enemies.style.position = 'relative';
+        enemies.style.marginTop = '6px'; 
+        enemies.style.lineHeight = '0.7';
+        // enemies.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
+        enemies.style.padding = '2px';            
+        enemies.style.borderRadius = '1px';    
+        enemies.style.display = 'block';    
+        // enemies.style.outline = '1px solid #0F0E0C';
+        popOutMenu.appendChild(enemies);
+        const enemiessubtxt = document.createElement('h3');
+        enemiessubtxt.innerText = 'Those diametrically opposed to doing the right thing.';
+            enemiessubtxt.style.fontFamily = '"Bahnschrift SemiBold", "Bahnschrift", sans-serif';
+            enemiessubtxt.style.color = '#B62C1A';
+            enemiessubtxt.style.textShadow = '2px 2px 3px #000000';
+            enemiessubtxt.style.fontSize = '13px';
+        enemiessubtxt.style.textAlign = 'left';
+        enemiessubtxt.style.top = '-04px';   
+        enemiessubtxt.style.position = 'relative';
+        enemiessubtxt.style.marginTop = '-04px'; 
+        enemiessubtxt.style.lineHeight = '0.7';
+        // enemiessubtxt.style.backgroundColor = 'rgba(219, 208, 208, 0.5)'; 
+        enemiessubtxt.style.padding = '2px';            
+        enemiessubtxt.style.borderRadius = '1px';    
+        enemiessubtxt.style.display = 'block';    
+        // enemiessubtxt.style.outline = '1px solid #0F0E0C';
+        enemiessubtxt.style.marginTop = '-8px';
+        enemiessubtxt.style.marginBottom = '-04px'; 
+        popOutMenu.appendChild(enemiessubtxt);
+
+        // Create the menu list
+        const menuListB = document.createElement('ul');
+        menuListB.style.listStyle = 'none';
+        menuListB.style.padding = '1px';
+        menuListB.style.maxHeight = '218px'; // Set a maximum height for the container
+        menuListB.style.overflowY = 'auto'; // Add vertical scrollbar if needed
+        menuListB.style.outline = '1px solid #CCCCCC';
+        menuListB.style.border = '1px solid transparent';
+
+        // Add menu items from the array
+        menuItemsB.forEach(item => {
+            const menuItem = document.createElement('div');
+
+            if(item.id == "PERCY_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/mErNyqK.png")';
+            }
+            if(item.id == "ROCKEFELLER_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/iwfbz7m.png")';
+            }
+            if(item.id == "GOLDWATER_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/854dTP0.png")';
+            }
+            if(item.id == "AGNEW_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/VgqCQvO.png")';
+            }
+            if(item.id == "LINDSAY_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/1BYT0LB.png")';
+            }
+            if(item.id == "REAGAN_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/rs4pBlf.png")';
+            }
+            if(item.id == "NIXON_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/7AVjVyd.png")';
+            }
+            if(item.id == "YORTY_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/OIteO0t.png")';
+            }
+            if(item.id == "HUGHES_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/Mb0Laew.png")';
+            }
+            if(item.id == "HUGHES_B"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/QHzdy3w.png")';
+            }
+            if(item.id == "WALLACE_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/jRzdwPi.png")';
+            }
+            if(item.id == "RARICK_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/WykUvax.png")';
+            }
+            if(item.id == "PEROT_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/ynsPxyr.png")';
+            }
+            if(item.id == "MCCARTHY_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/ayrpOi6.png")';
+            }
+            if(item.id == "SPOCK_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/Dqh5a8C.png")';
+            }
+            if(item.id == "MCCLOSKEY_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/DIf7ydf.png")';
+            }
+            if(item.id == "JARVIS_A"){
+                menuItem.style.background = 'linear-gradient(rgba(81, 87, 84, 0.9), rgba(81, 87, 84, 0.5)), url("https://i.imgur.com/vh9enKG.png")';
+            }
+
+            menuItem.style.position = 'relative'; // Allows absolute positioning inside
+            menuItem.style.display = 'flex';
+            menuItem.style.alignItems = 'flex-start';
+            menuItem.style.marginBottom = '5px';
+            menuItem.style.backgroundColor = 'rgba(128, 142, 142, 0.5)';
+            menuItem.style.padding = '1px';
+            menuItem.style.borderRadius = '3px';
+            menuItem.style.outline = '1px solid #0F0E0C';
+
+            const photo = document.createElement('img');
+            photo.src = item.photo;
+            photo.style.border = "1px solid #0F0E0C";
+            photo.style.padding = "1px";
+            photo.style.width = '100px';
+            photo.style.height = '100px';
+            photo.style.marginRight = '10px';
+
+            const textAndButton = document.createElement('div');
+
+            const text = document.createElement('p');
+            text.style.fontSize = "13px";
+            text.innerHTML = item.text;
+            text.style.margin = '0';
+
+            textAndButton.appendChild(text);
+            menuItem.appendChild(photo);
+            menuItem.appendChild(textAndButton);
+
+            // Optional tooltip element with dynamic value
+            if (item.tooltip) {
+                const tooltipIcon = document.createElement('div');
+                tooltipIcon.textContent = '[?]';  // Text for the tooltip indicator
+                tooltipIcon.style.position = 'absolute';
+                tooltipIcon.style.top = '5px';
+                tooltipIcon.style.right = '5px';
+                tooltipIcon.style.color = '#2CA0D2';
+                tooltipIcon.style.cursor = 'pointer';
+                tooltipIcon.style.fontSize = '11px';
+
+                // Tooltip functionality: Add hover behavior
+                tooltipIcon.addEventListener('mouseover', () => {
+                    const tooltip = document.createElement('div');
+                    tooltip.style.position = 'absolute';
+                    tooltip.style.backgroundColor = '#333';
+                    tooltip.style.color = '#fff';
+                    tooltip.style.padding = '5px';
+                    tooltip.style.borderRadius = '3px';
+                    tooltip.style.fontSize = '12px';
+                    tooltip.style.zIndex = '1000';
+                    tooltip.style.top = `${tooltipIcon.getBoundingClientRect().top + window.scrollY + 20}px`;  // Position below the icon
+                    tooltip.style.left = `${tooltipIcon.getBoundingClientRect().left + window.scrollX}px`;
+
+                    // Inject the static tooltip content with dynamic value in the tooltip
+                    let dynamicValue;
+                    switch (item.id) {
+                        case 'PERCY_A':
+                            dynamicValue = opponents.percy;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'ROCKEFELLER_A':
+                            dynamicValue = opponents.rockefeller;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'GOLDWATER_A':
+                            dynamicValue = opponents.goldwater;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'AGNEW_A':
+                            dynamicValue = opponents.agnew;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'LINDSAY_A':
+                            dynamicValue = opponents.lindsay;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'REAGAN_A':
+                            dynamicValue = opponents.reagan;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'NIXON_A':
+                            dynamicValue = opponents.nixon;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'YORTY_A':
+                            dynamicValue = opponents.yorty;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        case 'HUGHES_A':
+                            dynamicValue = opponents.hughes;
+                            dynamicValue = Math.round(dynamicValue * 10.0) / 10.0;
+                            break;
+                        default:
+                            dynamicValue = 'N/A';
+                    }
+                    tooltip.innerHTML = `${item.tooltip}<br><br>Position: ${dynamicValue}`;
+
+                    // Append the tooltip to the body
+                    document.body.appendChild(tooltip);
+
+                    // Remove the tooltip on mouse out
+                    tooltipIcon.addEventListener('mouseout', () => {
+                        document.body.removeChild(tooltip);
+                    });
+                });
+
+                // Add the tooltipIcon to the menuItem
+                menuItem.appendChild(tooltipIcon);
+            }
+
+            menuListB.appendChild(menuItem);
+        });
+        popOutMenu.appendChild(menuListB);
 
         const closeButton = document.createElement('button');
         closeButton.innerText = 'Close';
-        closeButton.onclick = closeHeadquarter;
+        closeButton.onclick = closeSurrogates;
         popOutMenu.appendChild(closeButton);
 
         document.body.appendChild(popOutMenu);
@@ -63667,16 +64021,11 @@ if(!Judge == 0){
     if (savedX !== null && savedY !== null) {
         popOutMenu.style.left = savedX + 'px';
         popOutMenu.style.top = savedY + 'px';
-    } else {
+    }
+    else {
         const buttonRect = event.target.getBoundingClientRect();
-        
-        // Vertically position the menu above the Warroom button
-        popOutMenu.style.top = (buttonRect.top - popOutMenu.offsetHeight - 10) + 'px';
-
-        // Horizontally center the menu relative to the button
-        popOutMenu.style.left = (buttonRect.left + (buttonRect.width / 2) - (popOutMenu.offsetWidth / 2)) + 'px';
-        
-        // Save the initial calculated position
+        popOutMenu.style.left = buttonRect.right + 353 + 'px'; // Offset X
+        popOutMenu.style.top = buttonRect.top - 292 + 'px'; // Offset Y
         savedX = popOutMenu.getBoundingClientRect().left;
         savedY = popOutMenu.getBoundingClientRect().top;
     }
@@ -63685,7 +64034,7 @@ if(!Judge == 0){
     popOutMenu.style.display = 'block';
 }
 
-function closeHeadquarter() {
+function closeSurrogates() {
     const popOutMenu = document.getElementById('popOutMenu');
     if (popOutMenu) {
         savedX = popOutMenu.getBoundingClientRect().left;
@@ -63695,11 +64044,11 @@ function closeHeadquarter() {
     }
 }
 
-function refreshHeadquarter() {
+function refreshSurrogates() {
     const popOutMenu = document.getElementById('popOutMenu');
     if (popOutMenu) {
         popOutMenu.remove();
-        openHeadquarter();
+        openSurrogates();
     }
 }
 
@@ -63757,7 +64106,6 @@ if (!element) {
 	controlElement.id = 'controlElement';
 	document.body.appendChild(controlElement);
 }
-
 
 // Change candidate pics each question
 
