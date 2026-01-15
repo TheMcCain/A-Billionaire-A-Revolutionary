@@ -1,5 +1,3 @@
-document.head.innerHTML += '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">';
-
 campaignTrail_temp.election_json = [
     {
         "model": "campaign_trail.election",
@@ -791,6 +789,8 @@ margin-top: 10%;
         `;
         document.head.appendChild(style);
     }
+
+document.head.innerHTML += '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">';
 
 // Psst: this is for replacing the site_description with this custom modal.
 (() => {
