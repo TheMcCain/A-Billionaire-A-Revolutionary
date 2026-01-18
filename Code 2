@@ -64167,11 +64167,14 @@ if (e.noCounter % 2 === 1) {
     }
 	if (e.noCounter == 10 && TrumpLeft >= 2 && BernieRight >= 2 && Wins > 3) {
 		Rebirth++;
+        campaignTrail_temp.candidate_json[0].fields.color_hex  = "#771c6b";
 	}
 	if (e.noCounter == 15) {
 		if (Rebirth == 0) {
 			campaignTrail_temp.candidate_json[2].fields.first_name = "Bernard"
         	campaignTrail_temp.candidate_json[2].fields.last_name = "Sanders"
+            campaignTrail_temp.candidate_json[2].fields.color_hex  = "#E21818";
+            campaignTrail_temp.candidate_json[0].fields.color_hex  = "#2A53B2";
 		}
 		else {
             if (TrumpLeft > 5 && BernieRight <= 0) {
@@ -64182,7 +64185,8 @@ if (e.noCounter % 2 === 1) {
             }
 			 else if (TrumpLeft > 3 && BernieRight < 3) {
             campaignTrail_temp.candidate_json[2].fields.first_name = "Michael"
-        	campaignTrail_temp.candidate_json[2].fields.last_name = "Bloomberg" 
+        	campaignTrail_temp.candidate_json[2].fields.last_name = "Bloomberg"
+            campaignTrail_temp.candidate_json[2].fields.color_hex  = "#443e3e";
             }
             
 		}
