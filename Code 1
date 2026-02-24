@@ -758,7 +758,7 @@ form[name="difficulty_level_selection"] {
   margin-bottom: 40%;
 }
 
-.overlay_window img {
+#visit_content > img {
   margin: 0 24px 16px;
   border: none;
   height: auto;
