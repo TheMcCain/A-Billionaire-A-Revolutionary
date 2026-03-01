@@ -61796,17 +61796,17 @@ if (e.noCounter % 2 === 1) {
 
 
     // +1 Unity
-    if (ans == 6109 || ans == 6110 || ans == 6111 || ans == 6112 || ans == 6114 || ans == 6115) {
+    if (ans == 6109 || ans == 6110 || ans == 6111 || ans == 6112 || ans == 6114 || ans == 79073 || ans == 79075 || ans == 79077 || ans == 6116 || ans == 6125 || ans == 6127 || ans == 6118 || ans == 6119 || ans == 6120) {
         Unity += 1;
     }
 
     // +1 Wins
-    if (ans == 6113) {
+    if (ans == 6114 || ans == 6125 || ans == 6127) {
         Wins += 1;
     }
 
     // -1 Unity
-    if (ans == 6113) {
+    if (ans == 6113 || ans == 6126 || ans == 6128 || ans == 6117) {
         Unity -= 1;
     }
 
@@ -61814,12 +61814,22 @@ if (e.noCounter % 2 === 1) {
     if (ans == 6114) {
         Movement -= 1;
     }
-
+	// +1 TrumpLeft
+	if (ans == 6110 || ans == 6111 || ans == 79073 || ans == 6114 || ans == 6115 || ans == 6127 || ans == 6118 || ans == 6119) {
+		TrumpLeft += 1;
+	}
     // -1 TrumpLeft
-    if (ans == 6115) {
+    if (ans == 6115 || ans == 6113 || ans == 6126 || ans == 6128 || ans == 6117 || ans == 6120) {
         TrumpLeft -= 1;
     }
-
+	// +1 BernieRight
+	if (ans == 6109 || ans == 6110 || ans == 79073 || ans == 6114 || ans == 6126 || ans == 6117) {
+		BernieRight += 1;
+	}
+	// -1 BernieRight
+	if (ans == 6128) {
+		BernieRight -= 1;
+	}
     // +1 Movement
     if (ans == 6116 || ans == 6109) {
         Movement += 1;
