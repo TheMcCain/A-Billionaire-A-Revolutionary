@@ -61276,7 +61276,23 @@ var endingChanged = 0;
 var debug = false;
 var resetPage = false
 
-
+const TrumpLeftMap = {
+	"-7": `Trump is <b><span style="color: #821F14;">somewhere to the right of Pat Buchanan and the left of Adolf Hitler</span></b>. (<span style="color:#821F14;">-7</span>)`,
+	"-6": `Trump is <b><span style="color: #821F14;">taking notes from 4chan</span></b>. (<span style="color:#821F14;">-6</span>)`,
+	"-5": `Trump is <b><span style="color: #821F14;">taking notes from 4chan</span></b>. (<span style="color:#821F14;">-5</span>)`,
+	"-4": `Trump has been <b><span style="color: #821F14;">increasingly shifting to the right</span></b>. (<span style="color:#821F14;">-4</span>)`,
+	"-3": `Trump has been <b><span style="color: #821F14;">increasingly shifting to the right</span></b>. (<span style="color:#821F14;">-3</span>)`,
+	"-2": `Trump is <b><span style="color: #821F14;">slowly shifting right</span></b>. (<span style="color:#821F14;">-2</span>)`,
+	"-1": `Trump is <b><span style="color: #821F14;">slowly shifting right</span></b>. (<span style="color:#821F14;">-1</span>)`,
+	"0": `Trump has <b><span style="color: #CEA665;">not</span></b> shifted to the left. (<span style="color:#CEA665;">0</span>)`,
+	"1": `Trump has <b><span style="color: #CEA665;">slightly</span></b> shifted to the left. (<span style="color:#CEA665;">1</span>)`,
+	"2": `Trump has <b><span style="color: #CEA665;">slightly</span></b> shifted to the left. (<span style="color:#CEA665;">2</span>)`,
+	"3": `Trump has <b><span style="color: #1C5B22;">noticably</span></b> shifted to the left. (<span style="color:#1C5B22;">3</span>)`,
+	"4": `Trump has <b><span style="color: #1C5B22;">noticably</span></b> shifted to the left. (<span style="color:#1C5B22;">4</span>)`,
+	"5": `Trump has shifted <b><span style="color: #1C5B22;">far</span></b> to the left. (<span style="color:#1C5B22;">5</span>)`,
+	"6": `Trump has shifted <b><span style="color: #1C5B22;">far</span></b> to the left. (<span style="color:#1C5B22;">6</span>)`,
+	"7": `Trump <b><span style="color: #1C5B22;">is a MAGA Communist</span></b>. (<span style="color:#1C5B22;">7</span>)`,
+}
 const achievementsMap = {
     "0": `The Administration has had <i><span style="color: #821F14;">no</i></span> <b>national successes</b>. (<span style="color:#821F14;">0</span>)`,
     "1": `The Administration has had <i><span style="color: #CEA665;">few</i></span> <b>national successes</b>. (<span style="color:#CEA665;">1</span>)`,
@@ -61518,9 +61534,9 @@ menuTitle.style.textShadow = '0 1px 2px rgba(0,0,0,0.6)';
         ov.style.margin = '8px 0';
         ov.font = 'Verdana';
         popOutMenu.appendChild(ov);
-
+		console.log(TrumpLeft);
         let overviewtxt = "";
-        overviewtxt += "• " + achievementsMap[String(achievements)] + "<br>";
+        overviewtxt += "• " + TrumpLeftMap[String(TrumpLeft)] + "<br>";
         overviewtxt += "• " + eminenceMap[String(eminence)] + "<br>";
         overviewtxt += "• " + cultSupportMap[String(cult_support)] + "<br>";
         overviewtxt += "• " + southSupportMap[String(south_support)] + "<br>";
